@@ -1,7 +1,7 @@
 .skills {
     background-color: #1c1c1c;
-    height: 695px;
     display: flex;
+
     justify-content: center;
     align-items: center;
 }
@@ -14,4 +14,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.skills_content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 695px;
+    padding: 0 96px;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 520px;
+
+    >span {
+        color: #3DCFB6;
+        font-family: 'Karla';
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    >div {
+        border: 1px solid #3DCFB6;
+        border-radius: 30px;
+        background-color: #3DCFB61A;
+        padding: 32px;
+    }
 }

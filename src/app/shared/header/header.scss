@@ -1,0 +1,103 @@
+header {
+    position: absolute;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+    width: 100%;
+    z-index: 100;
+
+}
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 96px;
+
+    >a {
+        display: flex;
+        height: 80px;
+        width: 320px;
+        background-image: url('./../../../assets/img/logo_wb.png');
+        background-position: center;
+        background-size: cover;
+
+        &:hover {
+            background-image: url('./../../../assets/img/logo_wb_hover.png') !important;
+        }
+    }
+
+
+}
+
+
+.language_btn {
+    cursor: pointer;
+    width: 84px;
+    height: 28px;
+    background-image: url('./../../../assets/img/deutsch.png');
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+        background-image: url('./../../../assets/img/deutsch\ hover.png');
+    }
+}
+
+.language_en {
+    background-image: url('./../../../assets/img/default.png');
+
+    &:hover {
+        background-image: url('./../../../assets/img/default hover.png');
+    }
+}
+
+.nav_link.active {
+    color: rgba(106, 215, 191, 1) !important;
+
+    >.dot {
+        position: absolute;
+        bottom: 28px;
+        background-color: rgba(106, 215, 191, 1);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+
+    }
+
+}
+
+.header_left {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+
+
+    >a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Fira-Code';
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover .dot {
+            position: absolute;
+            bottom: 28px;
+            background-color: rgba(106, 215, 191, 1);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+
+        }
+
+    }
+}

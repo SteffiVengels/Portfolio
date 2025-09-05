@@ -1,0 +1,266 @@
+.landing_page {
+    background-image: linear-gradient(to bottom left, #08463b, #1c1c1c 60%);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.max-width {
+    max-width: 1920px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    >h2 {
+        margin: 0
+    }
+
+}
+
+
+.title_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    >h1 {
+        margin: 0
+    }
+
+    >div {
+        display: flex;
+        gap: 48px;
+    }
+}
+
+
+a {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 13px 24px;
+    font-family: 'Karla';
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.8s ease, border-color 0.8s ease;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+
+    span {
+        display: inline-block;
+        white-space: nowrap;
+        position: relative;
+        transform: translateX(0);
+    }
+
+    &:hover {
+        border-color: rgba(61, 207, 182, 1);
+        color: rgba(61, 207, 182, 1);
+
+        span {
+            animation: scrollText 2.4s linear infinite;
+        }
+    }
+}
+
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(61, 207, 182, 1);
+    border: 1px solid rgba(61, 207, 182, 1)
+}
+
+
+.marquee_text {
+    color: rgba(61, 207, 182, 1);
+    font-family: 'Karla';
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+.marquee {
+    position: absolute;
+    bottom: 60px;
+    transform: rotate(-3deg);
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 12px 32px;
+    backdrop-filter: blur(5.300000190734863px);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+.marquee_wrapper {
+    width: calc(100% - 64px);
+    overflow: hidden;
+}
+
+
+.marquee_content {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    animation: marquee 40s linear infinite;
+    width: max-content;
+    white-space: nowrap;
+    padding-right: 56px;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.right_lateral {
+    position: absolute;
+    right: 84px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 24px;
+
+    >a {
+        border: none;
+        padding: 0;
+        transition: none;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        padding-left: 12px;
+    }
+}
+
+
+.social_links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 44px;
+
+    >a {
+        border: none;
+        padding: 0;
+        transition: none;
+        width: 32px;
+        height: 32px;
+        width: 44px;
+        background-repeat: no-repeat;
+    }
+}
+
+.linkedin {
+    background-image: url('./../../../assets/img/social icons/Linkedin.png');
+
+    &:hover {
+        background-image: url('./../../../assets/img/social icons/Linkedin Hover.png');
+    }
+
+}
+
+.github {
+    background-image: url('./../../../assets/img/social icons/Github.png');
+
+    &:hover {
+        background-image: url('./../../../assets/img/social icons/GitHub Hover.png');
+    }
+
+}
+
+.vector {
+    height: 186px;
+    width: 0px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin-right: 12px;
+}
+
+.left_lateral {
+    position: absolute;
+    left: 96px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    >a {
+        border: 1px solid rgba(61, 207, 182, 1);
+        padding: 0;
+        height: 48px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+            animation: bounce 1.25s infinite ease-in-out;
+        }
+    }
+
+    >.vector {
+        border: 1px solid rgba(61, 207, 182, 1);
+        margin-right: 0;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}

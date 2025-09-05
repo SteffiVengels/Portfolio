@@ -1,0 +1,15 @@
+{
+    "landingPage": {
+        "title": "Frontend Developer",
+        "checkmywork": "Check my work",
+        "contactme": "Contact me",
+        "available": "Available for remote work",
+        "based": "Based in Essen",
+        "open": "Open to work"
+    },
+    "header": {
+        "aboutme": "About me",
+        "skills": "Skills",
+        "portfolio": "Projects"
+    }
+}

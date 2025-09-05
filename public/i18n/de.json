@@ -1,0 +1,15 @@
+{
+    "landingPage": {
+        "title": "Frontend Entwicklerin",
+        "checkmywork": "Meine Projekte",
+        "contactme": "Schreib mir",
+        "available": "Remote verfügbar",
+        "based": "Aus Essen",
+        "open": "Offen für Jobangebote"
+    },
+    "header": {
+        "aboutme": "Über mich",
+        "skills": "Fähigkeiten",
+        "portfolio": "Projekte"
+    }
+}

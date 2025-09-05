@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/Karla/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira-Code';
+    src: url('assets/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --mx: 50%;
+    --my: 50%;
+    --spot-size: 80px;
+    --spot-color: rgba(61, 207, 182, 0.5);
+    ;
+}
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+.spotlight-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background:
+        radial-gradient(circle at var(--mx) var(--my),
+            var(--spot-color) 0,
+            transparent var(--spot-size));
+}
+
+h1 {
+    font-family: 'Karla';
+    font-size: 128px;
+    font-weight: 700;
+    font-style: bold;
+}
+
+h2 {
+    font-family: 'Fira-Code';
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+
+body {
+    --sb-track-color: #1c1c1c;
+    --sb-thumb-color: #08463b;
+    --sb-size: 8px;
+}
+
+/* Webkit-Browser (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0;
+    /* Track eckig → keine weißen Punkte */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 8px;
+    /* nur Thumb rund */
+    border: none;
+    min-height: 30px;
+    /* optional: Thumb-Höhe minimal */
+    background-clip: content-box;
+    /* sauberes Rendern */
+}
+
+/* Firefox fallback */
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+        scrollbar-width: thin;
+    }
+}

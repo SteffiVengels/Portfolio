@@ -1,4 +1,9 @@
 {
+    "header": {
+        "aboutme": "About me",
+        "skills": "Skills",
+        "portfolio": "Projects"
+    },
     "landingPage": {
         "title": "Frontend Developer",
         "checkmywork": "Check my work",
@@ -7,9 +12,12 @@
         "based": "Based in Essen",
         "open": "Open to work"
     },
-    "header": {
-        "aboutme": "About me",
-        "skills": "Skills",
-        "portfolio": "Projects"
+    "aboutMe": {
+        "section": "Who I Am",
+        "title": "About Me",
+        "general": "Hi, I'm Steffi! I see programming as a way to combine creative ideas with logical thinking. I especially enjoy tackling problems and building something new through code. IT fascinates me because there’s always something new to learn, and every step forward opens up exciting possibilities.",
+        "located": "I live in Essen and primarily work remotely, though I’m also open to hybrid arrangements.",
+        "cognition": "Being open-minded and eager to learn is essential for me as a developer. I enjoy exploring new technologies, expanding my knowledge, and continuously growing – both professionally and personally.",
+        "quality": "I approach challenges in a structured yet creative way. Every task is an opportunity to find better solutions. Writing clean, readable code that can be easily maintained and extended within a team is very important to me."
     }
 }

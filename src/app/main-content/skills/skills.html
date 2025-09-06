@@ -1,7 +1,7 @@
 <section class="skills">
     <div class="max-width">
         <div class="skills_content">
-            <div class="text_container">
+            <div class="text_container reveal-left">
                 <span>{{ 'skills.section' | translate }}</span>
                 <div class="text">
                     <h2>{{ 'skills.title' | translate }}</h2>
@@ -12,7 +12,7 @@
                     <a href="#contact-me"><span>{{ 'skills.letsTalk' | translate }}</span></a>
                 </div>
             </div>
-            <div class="icon_container">
+            <div class="icon_container reveal-right">
                 <section class="icon_box" *ngFor="let skill of skilllist">
                     <div class="frame">
                         <img [src]="'assets/img/skills/' + skill.img" [alt]="skill.name + ' icon'">

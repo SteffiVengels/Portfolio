@@ -19,5 +19,14 @@
         "located": "I live in Essen and primarily work remotely, though I’m also open to hybrid arrangements.",
         "cognition": "Being open-minded and eager to learn is essential for me as a developer. I enjoy exploring new technologies, expanding my knowledge, and continuously growing – both professionally and personally.",
         "quality": "I approach challenges in a structured yet creative way. Every task is an opportunity to find better solutions. Writing clean, readable code that can be easily maintained and extended within a team is very important to me."
+    },
+    "skills": {
+        "section": "Technologies",
+        "title": "Skill Set",
+        "general": "I bring experience in modern web development and enjoy creating clean, structured code. Since the field evolves so quickly, I’m always eager to learn new technologies and improve my skills. Every new development is a chance to grow and put my knowledge into practice.",
+        "question": "Missing a",
+        "question_important": "specific skill?",
+        "prompt": "Feel free to get in touch – I look forward to expanding my knowledge and exploring new technologies.",
+        "letsTalk": "Let's Talk"
     }
 }

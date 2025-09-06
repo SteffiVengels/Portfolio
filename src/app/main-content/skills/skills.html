@@ -2,17 +2,34 @@
     <div class="max-width">
         <div class="skills_content">
             <div class="text_container">
-                <span>Technologien</span>
+                <span>{{ 'skills.section' | translate }}</span>
                 <div class="text">
-                    <h2>Fähigkeiten</h2>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <a href="#contact-me"></a>
+                    <h2>{{ 'skills.title' | translate }}</h2>
+                    <p>{{ 'skills.general' | translate }}</p>
+                    <strong>{{ 'skills.question' | translate }} <span>{{ 'skills.question_important' | translate
+                            }}</span></strong>
+                    <p>{{ 'skills.prompt' | translate }}</p>
+                    <a href="#contact-me"><span>{{ 'skills.letsTalk' | translate }}</span></a>
                 </div>
             </div>
-            <div class="icons"></div>
+            <div class="icon_container">
+                <section class="icon_box" *ngFor="let skill of skilllist">
+                    <div class="frame">
+                        <img [src]="'assets/img/skills/' + skill.img" [alt]="skill.name + ' icon'">
+                    </div>
+                    <p>{{ skill.name }}</p>
+                </section>
+                <section class="growth_mindset_box">
+                    <div class="frame">
+                        <img src="assets/img/skills/growthms.png" alt="growth mindset icon">
+                    </div>
+                    <p>Growth mindset</p>
+                    <div class="preview">
+                        <img src="assets/img/skills/Group-18.png" alt="Vue and React icon">
+                    </div>
+                </section>
 
+            </div>
         </div>
 
     </div>

@@ -19,5 +19,14 @@
         "located": "Ich lebe in Essen und arbeite bevorzugt remote, stehe aber auch hybriden Modellen offen gegenüber.",
         "cognition": "Offenheit und Lernbereitschaft sind für mich als Entwickler entscheidend. Ich probiere gerne neue Technologien aus, eigne mir neues Wissen an und entwickle mich so kontinuierlich weiter - fachlich wie auch persönlich.",
         "quality": "Herausforderungen gehe ich strukturiert, aber auch kreativ an. Jede Aufgabe ist für mich eine Chance, bessere Lösungen zu finden. Besonders wichtig ist mir dabei, sauberen und gut verständlichen Code zu schreiben, der im Team leicht erweitert werden kann."
+    },
+    "skills": {
+        "section": "Technologien",
+        "title": "Fähigkeiten",
+        "general": "Ich bringe Erfahrungen im Bereich moderner Webentwicklung mit und lege besonderen Wert auf technische Präzision sowie klare Strukturen im Code. Da sich die Webentwicklung rasant weiterentwickelt, ist es mir besonders wichtig, offen für neue Technologien zu bleiben und mein Wissen kontinuierlich auszubauen. Jede Neuerung betrachte ich als Chance, meine Fähigkeiten zu vertiefen und praxisnah einzusetzen.",
+        "question": "Fehlt Ihnen eine",
+        "question_important": "bestimmte Fähigkeit?",
+        "prompt": "Kontaktieren Sie mich gerne – ich freue mich darauf, mein Wissen zu erweitern und neueTechnologien kennenzulernen.",
+        "letsTalk": "Los geht's"
     }
 }

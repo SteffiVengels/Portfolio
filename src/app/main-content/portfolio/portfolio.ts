@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -10,7 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })
-export class Portfolio {
+export class Portfolio implements AfterViewInit {
   projectlist = [
     {
       title: 'Join',
@@ -41,10 +41,41 @@ export class Portfolio {
       subdomain: 'https://steffivengels.github.io/DA_Bubble/'
     }
   ];
-  
 
-  constructor(public translate: TranslateService) {
+  hoveredIndex: number | null = null;
+  public animated = false;
+
+  constructor(public translate: TranslateService) { }
+
+  ngAfterViewInit(): void {
+    const section = document.querySelector('.project_overview');
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          obs.unobserve(entry.target); // nur einmal auslösen
+
+          // Base-Delay bevor die Animation startet
+          const cards = Array.from(document.querySelectorAll('.project_card.animation')) as HTMLElement[];
+          const baseDelay = 200;
+
+          setTimeout(() => {
+            this.animated = true; // bindet [class.visible] im HTML
+            cards.forEach((card, i) => {
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, i * 150); 
+            });
+          }, baseDelay);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
   }
-
-  hoveredIndex: number | null = null; // Index der gerade gehyoverten Karte
 }
+
+
+
+

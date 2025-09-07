@@ -6,7 +6,7 @@
             <div>
                 <section class="project_overview">
                     <p>{{ 'portfolio.general' | translate}}</p>
-                    <div class="project_card" *ngFor="let project of projectlist; let i = index"
+                    <div class="project_card animation" *ngFor="let project of projectlist; let i = index"
                         (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
                         <div class="title">
                             <p>{{ project.title }}</p>

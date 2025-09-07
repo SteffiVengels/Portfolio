@@ -28,5 +28,10 @@
         "question_important": "specific skill?",
         "prompt": "Feel free to get in touch – I look forward to expanding my knowledge and exploring new technologies.",
         "letsTalk": "Let's Talk"
+    },
+        "portfolio": {
+        "section": "Portfolio",
+        "title": "Featured Projects",
+        "general": "Explore a selection of my work here - Interact with projects to see my skills in action."
     }
 }

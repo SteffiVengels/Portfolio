@@ -28,5 +28,10 @@
         "question_important": "bestimmte Fähigkeit?",
         "prompt": "Kontaktieren Sie mich gerne – ich freue mich darauf, mein Wissen zu erweitern und neueTechnologien kennenzulernen.",
         "letsTalk": "Los geht's"
+    },
+    "portfolio": {
+        "section": "Portfolio",
+        "title": "Meine Projekte",
+        "general": "Entdecke hier eine Auswahl meiner Arbeiten – erlebe meine Fähigkeiten in Aktion."
     }
 }

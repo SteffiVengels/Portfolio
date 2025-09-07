@@ -1,0 +1,144 @@
+.portfolio {
+    display: flex;
+    justify-content: center;
+}
+
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio_content {
+    padding: 0 96px;
+
+    >span {
+        color: #3DCFB6;
+        font-family: 'Karla';
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 64px;
+    }
+}
+
+
+.project_overview {
+    max-width: 880px;
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+
+    >p {
+        font-family: 'Karla';
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #3DCFB6;
+        max-width: 880px;
+    }
+}
+
+
+.project_card {
+    max-width: 880px;
+    border-bottom: 1px solid #3DCFB6;
+    height: 109px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s ease, img 0.3s ease;
+
+    &:hover {
+        background: #3DCFB64D;
+
+        img {
+            display: flex;
+        }
+    }
+}
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 32px;
+
+    >p {
+        font-family: 'Fira-Code';
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+    }
+
+    >img {
+        display: none;
+        margin-left: 4px;
+        height: 23px;
+        width: 23px;
+    }
+}
+
+
+.skill-separator {
+    font-family: 'Karla';
+    color: #3DCFB6;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding-right: 32px;
+
+    >p {
+        font-family: 'Karla';
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+
+.preview_image {
+    height: 192px;
+    width: 295px;
+    border-radius: 16px;
+    position: absolute;
+    right: 16px;
+    z-index: 10;
+}
+
+
+.preview_background {
+    position: absolute;
+    top: 16px;
+    right: 0;
+}
+
+
+.preview_card {
+    width: 320px;
+    position: relative;
+}
+
+
+.project_preview {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}

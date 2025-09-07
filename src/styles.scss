@@ -113,3 +113,25 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
     transform: translateX(0);
 }
+
+
+
+
+/* Restliche Elemente unsichtbar am Anfang */
+.landing_page>.max-width>*:not(.title_container),
+.title_container .title_div>div,
+.marquee,
+.right_lateral,
+.left_lateral, header {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Sichtbar-Klasse */
+.landing_page>.max-width>*:not(.title_container).visible,
+.title_container .title_div>div.visible,
+.marquee.visible,
+.right_lateral.visible,
+.left_lateral.visible, header.visible {
+    opacity: 1;
+}

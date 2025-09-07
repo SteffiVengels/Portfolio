@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LandingPage } from './landing-page/landing-page';
 import { AboutMe } from './about-me/about-me';
 import { Skills } from './skills/skills';
@@ -14,5 +14,6 @@ import { ContactMe } from './contact-me/contact-me';
   styleUrl: './main-content.scss'
 })
 export class MainContent {
+    @Input() showRest: boolean = false;
 
 }

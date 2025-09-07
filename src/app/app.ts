@@ -12,6 +12,7 @@ import { Footer } from './shared/footer/footer';
   styleUrl: './app.scss'
 })
 export class App implements AfterViewInit {
+  public showRest = false; // Steuerung für andere Elemente
   protected readonly title = signal('Stefanie Vengels');
 
   ngAfterViewInit(): void {
@@ -33,6 +34,11 @@ export class App implements AfterViewInit {
     // Alle Elemente auf der Seite beobachten
     document.querySelectorAll('.reveal-left, .reveal-right')
       .forEach(el => observer.observe(el));
+
+
+    // Fade-In Landing Page + Header
+    setTimeout(() => {
+      this.showRest = true; // bindet [class.visible] an Landing Page & Header
+    }, 1000); // Dauer H1/H3 Animation
   }
 }
-

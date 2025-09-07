@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,6 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './header.scss'
 })
 export class Header {
+  @Input() showRest: boolean = false;
   public activeSection: string = '';
 
   constructor(public translate: TranslateService) {

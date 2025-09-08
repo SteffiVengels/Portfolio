@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { PortfolioOverlay } from './portfolio-overlay/portfolio-overlay';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [TranslatePipe, CommonModule],
+  imports: [TranslatePipe, CommonModule, PortfolioOverlay],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })

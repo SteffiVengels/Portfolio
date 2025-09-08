@@ -29,6 +29,12 @@
         height: 568px;
         width: 568px;
     }
+
+    &:hover {
+        >.background_picture {
+            display: flex;
+        }
+    }
 }
 
 .picture {
@@ -41,6 +47,7 @@
 }
 
 .background_picture {
+    display: none;
     top: 32px;
     left: -32px;
 }

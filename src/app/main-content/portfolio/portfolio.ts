@@ -32,13 +32,6 @@ export class Portfolio implements AfterViewInit {
       imagePreview: 'assets/img/portfolio/portfolio.png',
       link: 'https://github.com/SteffiVengels/Join',
       subdomain: 'https://steffivengels.github.io/Join/'
-    },
-    {
-      title: 'DA Bubble',
-      skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      imagePreview: 'assets/img/portfolio/dabubble.png',
-      link: 'https://github.com/SteffiVengels/DA_Bubble',
-      subdomain: 'https://steffivengels.github.io/DA_Bubble/'
     }
   ];
 

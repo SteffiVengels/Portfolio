@@ -22,7 +22,7 @@
                 </section>
                 <section class="project_preview">
                     <div class="preview_card" *ngFor="let project of projectlist; let index = index"
-                        [ngStyle]="{ 'top.px': 56 + (index * 88) }"
+                        [ngStyle]="{ 'top.px': 56 + (index * 80) }"
                         [style.display]="hoveredIndex === index ? 'flex' : 'none'">
                         <img class="preview_image" src="{{ project.imagePreview }}" alt="{{ project.title }}">
                         <img class="preview_background" src="assets/img/portfolio/background.png" alt="background">

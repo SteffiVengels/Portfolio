@@ -1,12 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
+interface Project {
+  title: string;
+  skills: string[];
+  imagePreview: string;
+  imageDialog: string;
+  github: string;
+  subdomain: string;
+}
 @Component({
   selector: 'app-portfolio-overlay',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './portfolio-overlay.html',
   styleUrl: './portfolio-overlay.scss'
 })
+
+
 export class PortfolioOverlay {
 
+
+  @Input() projectlist: Project[] = [];
+  @Input() currentIndex: number = 0;
+
+  @Output() closed = new EventEmitter<void>();
+
+  get selectedProject() {
+    return this.projectlist[this.currentIndex];
+  }
+
+  get number(): string {
+    return (this.currentIndex + 1).toString().padStart(2, '0');
+  }
+
+  nextProject() {
+    this.currentIndex = (this.currentIndex + 1) % this.projectlist.length;
+  }
+
+  closeDialog(): void {
+    this.closed.emit();
+    document.body.classList.remove('no-scroll');
+  }
+
+  constructor(public translate: TranslateService) { }
 }

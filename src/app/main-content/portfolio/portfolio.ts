@@ -4,6 +4,15 @@ import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PortfolioOverlay } from './portfolio-overlay/portfolio-overlay';
 
+interface Project {
+  title: string;
+  skills: string[];
+  imagePreview: string;
+  imageDialog: string;
+  github: string;
+  subdomain: string;
+}
+
 @Component({
   selector: 'app-portfolio',
   standalone: true,
@@ -11,35 +20,47 @@ import { PortfolioOverlay } from './portfolio-overlay/portfolio-overlay';
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })
+
 export class Portfolio implements AfterViewInit {
   projectlist = [
     {
       title: 'Join',
       skills: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
       imagePreview: 'assets/img/portfolio/join.png',
-      link: 'https://https://github.com/SteffiVengels/Portfolio',
-      subdomain: 'https://steffivengels.github.io/Portfolio/'
+      imageDialog: 'assets/img/portfolio/join_dialog.png',
+      github: 'https://github.com/SteffiVengels/Portfolio',
+      subdomain: 'https://join.stefanie-vengels.dev/'
     },
     {
       title: 'Happy Hollow',
       skills: ['JavaScript', 'HTML', 'CSS'],
       imagePreview: 'assets/img/portfolio/happyhollow.png',
-      link: 'https://github.com/SteffiVengels/Happy_Hollow',
-      subdomain: 'https://steffivengels.github.io/Happy_Hollow/'
+      imageDialog: 'assets/img/portfolio/happyhollow_dialog.png',
+      github: 'https://github.com/SteffiVengels/Happy_Hollow',
+      subdomain: 'https://happy-hollow.stefanie-vengels.dev/'
     },
     {
       title: 'Portfolio',
       skills: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       imagePreview: 'assets/img/portfolio/portfolio.png',
-      link: 'https://github.com/SteffiVengels/Join',
-      subdomain: 'https://steffivengels.github.io/Join/'
+      imageDialog: 'assets/img/portfolio/portfolio_dialog.png',
+      github: 'https://github.com/SteffiVengels/Portfolio',
+      subdomain: 'https://stefanie-vengels.dev/'
     }
   ];
 
   hoveredIndex: number | null = null;
   public animated = false;
 
+  selectedProjectIndex: number | null = null;
+
   constructor(public translate: TranslateService) { }
+
+  get selectedProject(): Project | null {
+    return this.selectedProjectIndex !== null
+      ? this.projectlist[this.selectedProjectIndex]
+      : null;
+  }
 
   ngAfterViewInit(): void {
     const section = document.querySelector('.project_overview');
@@ -59,7 +80,7 @@ export class Portfolio implements AfterViewInit {
             cards.forEach((card, i) => {
               setTimeout(() => {
                 card.classList.add('visible');
-              }, i * 150); 
+              }, i * 150);
             });
           }, baseDelay);
         }
@@ -68,8 +89,9 @@ export class Portfolio implements AfterViewInit {
 
     observer.observe(section);
   }
+
+  openDialog(index: number): void {
+    this.selectedProjectIndex = index;
+    document.body.classList.add('no-scroll');
+  }
 }
-
-
-
-

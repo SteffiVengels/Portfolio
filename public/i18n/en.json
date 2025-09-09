@@ -29,9 +29,24 @@
         "prompt": "Feel free to get in touch – I look forward to expanding my knowledge and exploring new technologies.",
         "letsTalk": "Let's Talk"
     },
-        "portfolio": {
+    "portfolio": {
         "section": "Portfolio",
         "title": "Featured Projects",
         "general": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    },
+    "portfolioDialog": {
+        "question": "What is this project about?",
+        "next_button": "Next project"
+    },
+    "projects": {
+        "Join": {
+            "description": "Task manager inspired by the Kanban system. Create and organize tasks via drag-and-drop, assign users and categories."
+        },
+        "Happy Hollow": {
+            "description": "Jump-and-run game based on an object-oriented approach. Choose a Tiny Hero, collect magical berries, and defeat the mighty Endboss."
+        },
+        "Portfolio": {
+            "description": "My personal developer portfolio built with Angular 20 – a platform to showcase my projects, skills, and passion for coding."
+        }
     }
 }

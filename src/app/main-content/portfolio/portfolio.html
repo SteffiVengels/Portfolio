@@ -7,7 +7,7 @@
                 <section class="project_overview">
                     <p>{{ 'portfolio.general' | translate}}</p>
                     <div class="project_card animation" *ngFor="let project of projectlist; let i = index"
-                        (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
+                        (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null" (click)="openDialog(i)">
                         <div class="title">
                             <p>{{ project.title }}</p>
                             <img src="assets/img/arrow_outward.png" alt="">
@@ -32,4 +32,5 @@
         </div>
     </div>
 </section>
-<app-portfolio-overlay></app-portfolio-overlay>
+<app-portfolio-overlay *ngIf="selectedProjectIndex !== null" [currentIndex]="selectedProjectIndex"
+    [projectlist]="projectlist" (closed)="selectedProjectIndex = null"></app-portfolio-overlay>

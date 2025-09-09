@@ -1,31 +1,27 @@
-<section class="portfolio_overlay">
+<section class="portfolio_overlay" *ngIf="selectedProject">
     <div class="dialog">
         <section class="content_left">
-            <span>01</span>
-            <h2>Join</h2>
+            <span>{{ number }}</span>
+            <h2>{{ selectedProject.title }}</h2>
             <div class="about_the_project">
-                <p class="headline">Worum geht es in diesem Projekt?</p>
-                <p class="description">Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.</p>
-                <div>
-                        <img src="/assets/img/skills/dialog/js.png" alt=""><span>JavaScript</span>
-                        <img src="/assets/img/skills/dialog/firebase.png" alt=""><span>Firebase</span>
-                        <img src="/assets/img/skills/dialog/html.png" alt=""><span>HTML</span>
-                        <img src="/assets/img/skills/dialog/css.png" alt=""><span>CSS</span>
+                <p class="headline">{{ 'portfolioDialog.question' | translate }}</p>
+                <p class="description">{{ ('projects.' + selectedProject.title + '.description') | translate }}</p>
+                <div class="skills">
+                    <ng-container *ngFor="let skill of selectedProject.skills; let i = index">
+                        <img [src]="'/assets/img/skills/dialog/' + skill + '.png'" [alt]="skill">
+                        <span>{{ skill }}</span>
+                    </ng-container>
                 </div>
             </div>
             <div class="links">
-                <a href="">GitHub<img src="/assets/img/arrow_forward.png" alt=""></a>
-                <a href="">Live Test<img src="/assets/img/arrow_forward.png" alt=""></a>
+                <a href="{{ selectedProject.github }}" target="_blank">GitHub<img src="/assets/img/arrow_forward.png" alt="arrow"></a>
+                <a href="{{ selectedProject.subdomain }}" target="_blank">Live Test<img src="/assets/img/arrow_forward.png" alt="arrow"></a>
             </div>
-
         </section>
         <section class="content_right">
-            <button class="close_btn"></button>
-            <img src="/assets/img/portfolio/join.png" alt="Screenshot der Join Applikation">
-            <button class="next_btn">Nächstes Projekt<span></span></button>
-
+            <button class="close_btn" (click)="closeDialog()"></button>
+            <img src="{{ selectedProject.imageDialog }}" alt="Screenshot der {{ selectedProject.title }} Applikation">
+            <button class="next_btn" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate }}<span></span></button>
         </section>
-        
     </div>
-
 </section>

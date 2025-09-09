@@ -94,6 +94,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 
 .reveal-left,
 .reveal-right {
@@ -122,7 +126,8 @@ body::-webkit-scrollbar-thumb {
 .title_container .title_div>div,
 .marquee,
 .right_lateral,
-.left_lateral, header {
+.left_lateral,
+header {
     opacity: 0;
     transition: opacity 0.8s ease;
 }
@@ -132,6 +137,7 @@ body::-webkit-scrollbar-thumb {
 .title_container .title_div>div.visible,
 .marquee.visible,
 .right_lateral.visible,
-.left_lateral.visible, header.visible {
+.left_lateral.visible,
+header.visible {
     opacity: 1;
 }

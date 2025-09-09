@@ -33,5 +33,20 @@
         "section": "Portfolio",
         "title": "Meine Projekte",
         "general": "Entdecke hier eine Auswahl meiner Arbeiten – erlebe meine Fähigkeiten in Aktion."
+    },
+    "portfolioDialog": {
+        "question": "Worum geht es in diesem Projekt?",
+        "next_button": "Nächstes Projekt"
+    },
+    "projects": {
+        "Join": {
+            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu."
+        },
+        "Happy Hollow": {
+            "description": "Jump-and-Run-Spiel basierend auf objektorientierter Programmierung. Wähle einen Tiny Hero, sammle magische Beeren und besiege den mächtigen Endboss."
+        },
+        "Portfolio": {
+            "description": "Mein persönliches Entwickler-Portfolio mit Angular 20 entwickelt – eine Plattform, auf der ich meine Projekte, Fähigkeiten und meine Leidenschaft fürs Coden zeige."
+        }
     }
 }

@@ -13,10 +13,13 @@
 
 .dialog {
     display: flex;
-    padding: 40px;
+    padding: 64px;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     border: 1px solid #3DCFB6;
     border-radius: 30px;
+    max-width: 1250px;
+    max-height: 656px;
+    margin: 64px;
 }
 
 .content_left {
@@ -90,12 +93,12 @@
 
 
 
-            >img {
-                height: 20px;
-                width: 20px;
-                transform: rotate(-45deg);
-                transition: transform 0.3s ease;
-            }
+        >img {
+            height: 20px;
+            width: 20px;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+        }
 
 
 
@@ -104,11 +107,79 @@
             color: #3DCFB6;
             border-color: #3DCFB6;
 
-                >img {
-                    transform: rotate(-45deg) translate(4px, 1px); // nach oben links verschieben
-                }
+            >img {
+                transform: rotate(-45deg) translate(4px, 1px); // nach oben links verschieben
+            }
 
         }
     }
 
+}
+
+.content_right {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    >img {
+        height: 370px;
+        width: 520px;
+        border-radius: 30px;
+        margin-left: 64px;
+    }
+}
+
+.close_btn {
+    background-color: transparent;
+    border: none;
+    background-image: url('./../../../../assets/img/portfolio/close.png');
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Hover-Bild als Overlay */
+.close_btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('./../../../../assets/img/portfolio/close_hover.png');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.close_btn:hover::after {
+    opacity: 1;
+}
+
+.next_btn {
+    background-color: transparent;
+    border: none;
+    color: #3DCFB6;
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    >span {
+        background-image: url('./../../../../assets/img/portfolio/arrow.png');
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+
+        >span {
+            background-image: url('./../../../../assets/img/portfolio/arrow_hover.png');
+        }
+    }
 }

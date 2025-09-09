@@ -28,6 +28,13 @@ export class PortfolioOverlay {
 
   @Output() closed = new EventEmitter<void>();
 
+  isOpen = false;
+
+  ngOnInit() {
+    // Animation starten, sobald das Overlay gerendert ist
+    setTimeout(() => this.isOpen = true, 10);
+  }
+
   get selectedProject() {
     return this.projectlist[this.currentIndex];
   }
@@ -41,8 +48,12 @@ export class PortfolioOverlay {
   }
 
   closeDialog(): void {
-    this.closed.emit();
-    document.body.classList.remove('no-scroll');
+    this.isOpen = false;
+    // Overlay nach Animation schließen
+    setTimeout(() => {
+      this.closed.emit();
+      document.body.classList.remove('no-scroll');
+    }, 300); // Dauer entspricht CSS-Transition
   }
 
   constructor(public translate: TranslateService) { }

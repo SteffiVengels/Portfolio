@@ -20,6 +20,14 @@
     max-width: 1250px;
     max-height: 656px;
     margin: 64px;
+    transform: translateY(-50px); // Startpunkt oben
+    opacity: 0; // unsichtbar am Anfang
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &.open {
+        transform: translateY(0); // Endposition
+        opacity: 1; // sichtbar
+    }
 }
 
 .content_left {

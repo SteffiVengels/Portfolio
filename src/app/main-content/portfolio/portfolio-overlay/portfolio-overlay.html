@@ -1,5 +1,5 @@
 <section class="portfolio_overlay" *ngIf="selectedProject">
-    <div class="dialog">
+    <div class="dialog"  [class.open]="isOpen">
         <section class="content_left">
             <span>{{ number }}</span>
             <h2>{{ selectedProject.title }}</h2>

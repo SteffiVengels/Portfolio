@@ -48,5 +48,19 @@
         "Portfolio": {
             "description": "Mein persönliches Entwickler-Portfolio mit Angular 20 entwickelt – eine Plattform, auf der ich meine Projekte, Fähigkeiten und meine Leidenschaft fürs Coden zeige."
         }
+    },
+    "references": {
+        "title": "Das sagen meine Kolleg:innen über mich",
+        "feedback": {
+            "1": {
+                "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts."
+            },
+            "2": {
+                "text": "Ich hatte das Glück, mit Lukas in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Einsatz erforderte. Er blieb immer ruhig, gelassen und fokussiert und sorgte dafür, dass unser Team gut aufgestellt war. Er ist sehr kompetent, angenehm im Umgang und ich würde jederzeit wieder mit ihm zusammenarbeiten."
+            },
+            "3": {
+                "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise."
+            }
+        }
     }
 }

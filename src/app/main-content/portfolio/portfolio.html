@@ -6,7 +6,7 @@
             <div>
                 <section class="project_overview">
                     <p>{{ 'portfolio.general' | translate}}</p>
-                    <div class="project_card animation" *ngFor="let project of projectlist; let i = index"
+                    <div class="project_card animation" *ngFor="let project of projectList; let i = index"
                         (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null" (click)="openDialog(i)">
                         <div class="title">
                             <p>{{ project.title }}</p>
@@ -21,7 +21,7 @@
                     </div>
                 </section>
                 <section class="project_preview">
-                    <div class="preview_card" *ngFor="let project of projectlist; let index = index"
+                    <div class="preview_card" *ngFor="let project of projectList; let index = index"
                         [ngStyle]="{ 'top.px': 56 + (index * 80) }"
                         [style.display]="hoveredIndex === index ? 'flex' : 'none'">
                         <img class="preview_image" src="{{ project.imagePreview }}" alt="{{ project.title }}">
@@ -33,4 +33,4 @@
     </div>
 </section>
 <app-portfolio-overlay *ngIf="selectedProjectIndex !== null" [currentIndex]="selectedProjectIndex"
-    [projectlist]="projectlist" (closed)="selectedProjectIndex = null"></app-portfolio-overlay>
+    [projectList]="projectList" (closed)="selectedProjectIndex = null"></app-portfolio-overlay>

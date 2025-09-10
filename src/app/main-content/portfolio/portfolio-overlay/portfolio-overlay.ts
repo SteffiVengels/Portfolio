@@ -23,7 +23,7 @@ interface Project {
 export class PortfolioOverlay {
 
 
-  @Input() projectlist: Project[] = [];
+  @Input() projectList: Project[] = [];
   @Input() currentIndex: number = 0;
 
   @Output() closed = new EventEmitter<void>();
@@ -36,7 +36,7 @@ export class PortfolioOverlay {
   }
 
   get selectedProject() {
-    return this.projectlist[this.currentIndex];
+    return this.projectList[this.currentIndex];
   }
 
   get number(): string {
@@ -44,7 +44,7 @@ export class PortfolioOverlay {
   }
 
   nextProject() {
-    this.currentIndex = (this.currentIndex + 1) % this.projectlist.length;
+    this.currentIndex = (this.currentIndex + 1) % this.projectList.length;
   }
 
   closeDialog(): void {

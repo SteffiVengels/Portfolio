@@ -22,7 +22,7 @@ interface Project {
 })
 
 export class Portfolio implements AfterViewInit {
-  projectlist = [
+  projectList = [
     {
       title: 'Join',
       skills: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
@@ -58,7 +58,7 @@ export class Portfolio implements AfterViewInit {
 
   get selectedProject(): Project | null {
     return this.selectedProjectIndex !== null
-      ? this.projectlist[this.selectedProjectIndex]
+      ? this.projectList[this.selectedProjectIndex]
       : null;
   }
 

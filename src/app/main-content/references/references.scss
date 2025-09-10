@@ -1,0 +1,136 @@
+.references {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.references_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+h4 {
+    margin-bottom: 42px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    gap: 64px;
+    overflow: hidden;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #3DCFB6;
+}
+
+.arrow {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.left {
+    background-image: url('./../../../assets/img/arrow_left.png');
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./../../../assets/img/arrow_left_hover.png');
+    }
+}
+
+
+.right {
+    background-image: url('./../../../assets/img/arrow_right.png');
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./../../../assets/img/arrow_right_hover.png');
+    }
+}
+
+.card {
+    font-family: 'Karla';
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #3DCFB6;
+    border-radius: 32px;
+    background: #3DCFB61A;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+    min-width: 632px;
+    height: 248px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card.active {
+    height: 274px;
+    background: rgba(61, 207, 182, 0.3);
+
+
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.vector {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    flex: 1;
+    height: 0px;
+}
+
+.shadow {
+    position: absolute;
+    top: 84px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+    z-index: 100;
+
+}

@@ -1,9 +1,27 @@
 <section class="references">
     <div class="max-width">
         <div class="references_content">
+            <h4>Das sagen meine Kolleg:innen über mich</h4>
 
-
+            <div class="carousel">
+                <div class="shadow"></div>
+                <div class="card" *ngFor="let feedback of feedbackList; let i = index"
+                    [class.active]="i === currentFeedbackIndex"
+                    [class.previous]="i === (currentFeedbackIndex - 1 + feedbackList.length) % feedbackList.length"
+                    [class.next]="i === (currentFeedbackIndex + 1) % feedbackList.length">
+                    <p>{{ feedback.text }}</p>
+                    <div class="info">
+                        <div class="vector"></div>
+                        <span>{{ feedback.name }} - {{ feedback.role }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button class="arrow left" (click)="showPreviousFeedback()"></button>
+                <div class="dot" *ngFor="let feedback of feedbackList; let i = index"
+                    [class.active]="i === currentFeedbackIndex"></div>
+                <button class="arrow right" (click)="showNextFeedback()"></button>
+            </div>
         </div>
-
     </div>
 </section>

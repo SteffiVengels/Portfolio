@@ -12,7 +12,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Skills {
 
-  skilllist = [
+  skillList = [
     { name: 'HTML', img: 'html.png' },
     { name: 'CSS', img: 'css.png' },
     { name: 'JavaScript', img: 'js.png' },

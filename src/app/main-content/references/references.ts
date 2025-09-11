@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -11,6 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './references.scss'
 })
 export class References {
+  @Input() hideHeader = false;
 
   feedbackList = [
     {

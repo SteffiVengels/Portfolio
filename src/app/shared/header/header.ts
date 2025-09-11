@@ -12,6 +12,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Header {
   @Input() showRest: boolean = false;
+    @Input() hideHeader = false;
   public activeSection: string = '';
 
   constructor(public translate: TranslateService) {

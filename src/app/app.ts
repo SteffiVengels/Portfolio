@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/header/header';
 import { MainContent } from './main-content/main-content';
@@ -14,6 +14,8 @@ import { Footer } from './shared/footer/footer';
 export class App implements AfterViewInit {
   public showRest = false; // Steuerung für andere Elemente
   protected readonly title = signal('Stefanie Vengels');
+  hideHeader = false;
+  lastScrollTop = 0;
 
   ngAfterViewInit(): void {
     const options = {
@@ -40,5 +42,16 @@ export class App implements AfterViewInit {
     setTimeout(() => {
       this.showRest = true; // bindet [class.visible] an Landing Page & Header
     }, 1000); // Dauer H1/H3 Animation
+  }
+
+    @HostListener('window:scroll', [])
+  onScroll() {
+    const currentScroll = window.scrollY;
+    if (currentScroll > this.lastScrollTop) {
+      this.hideHeader = true;
+    } else {
+      this.hideHeader = false;
+    }
+    this.lastScrollTop = currentScroll;
   }
 }

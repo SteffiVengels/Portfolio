@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .references_content {
@@ -91,19 +92,48 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 44px;
-    min-width: 632px;
-    height: 248px;
-    position: relative;
+    width: 552px;
+    height: 178px;
+    position: absolute;
+    transition: all 0.4s ease;
+
+    >p {
+        margin: 0;
+    }
 
 }
 
+.card.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .card.active {
-    height: 274px;
-    background: rgba(61, 207, 182, 0.3);
+  transform: translateX(0) scale(1);
+  background: #3DCFB64D;
+  z-index: 5;
+}
 
+/* links neben active */
+.card.prev1 {
+  transform: translateX(-110%) scale(0.9);
+  z-index: 4;
+}
+.card.prev2 {
+      opacity: 0;
+  transform: translateX(-220%) scale(0.7);
+  z-index: 3;
+}
 
-
+/* rechts neben active */
+.card.next1 {
+  transform: translateX(110%) scale(0.9);
+  z-index: 4;
+}
+.card.next2 {
+      opacity: 0;
+  transform: translateX(220%) scale(0.7);
+  z-index: 3;
 }
 
 
@@ -139,4 +169,20 @@
     position: absolute;
     top: -10px;
     left: -44px;
+}
+
+.quotes {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 632px;
+    height: 274px;
+    position: relative;
+    z-index: 100;
+
+    >img {
+        position: absolute;
+        top: -10px;
+        left: -44px;
+    }
 }

@@ -23,11 +23,18 @@
             autocomplete="off" required>
     </div>
 
-    <div class="form_group checkbox" [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched)}">
-        <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
-            required>
-        <label for="privacy">Ich habe die <a href="#" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</label>
+    <div class="privacy">
+        <div class="form_group checkbox" [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched)}">
+            <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
+                required>
+            <label for="privacy">Ich habe die <a href="#" target="_blank">Datenschutzerklärung</a> gelesen und stimme
+                der
+                Verarbeitung meiner Daten wie beschrieben zu.</label>
+        </div>
+        @if (privacy.invalid && (privacy.dirty || privacy.touched)) {<p class="error_msg">Bitte akzeptiere die
+            Datenschutzerklärung.</p>}
     </div>
+
 
     <button type="submit" class="submit_btn" [disabled]="contactForm.invalid">
         <span>Sag Hallo ;)</span>

@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    padding-top: 144px;
 
 }
 
@@ -104,36 +105,38 @@
 }
 
 .card.hidden {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .card.active {
-  transform: translateX(0) scale(1);
-  background: #3DCFB64D;
-  z-index: 5;
+    transform: translateX(0) scale(1);
+    background: #3DCFB64D;
+    z-index: 5;
 }
 
 /* links neben active */
 .card.prev1 {
-  transform: translateX(-110%) scale(0.9);
-  z-index: 4;
+    transform: translateX(-110%) scale(0.9);
+    z-index: 4;
 }
+
 .card.prev2 {
-      opacity: 0;
-  transform: translateX(-220%) scale(0.7);
-  z-index: 3;
+    opacity: 0;
+    transform: translateX(-220%) scale(0.7);
+    z-index: 3;
 }
 
 /* rechts neben active */
 .card.next1 {
-  transform: translateX(110%) scale(0.9);
-  z-index: 4;
+    transform: translateX(110%) scale(0.9);
+    z-index: 4;
 }
+
 .card.next2 {
-      opacity: 0;
-  transform: translateX(220%) scale(0.7);
-  z-index: 3;
+    opacity: 0;
+    transform: translateX(220%) scale(0.7);
+    z-index: 3;
 }
 
 
@@ -172,7 +175,7 @@
 }
 
 .quotes {
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 632px;

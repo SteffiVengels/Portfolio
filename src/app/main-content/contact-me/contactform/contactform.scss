@@ -1,0 +1,52 @@
+    form {
+        display: flex;
+        flex-direction: column;
+
+        >label {
+            font-size: 24px;
+            font-family: 'Fira-Code';
+            font-weight: 500;
+            color: #3DCFB6;
+        }
+    }
+
+    textarea, input {
+        background-color: transparent;
+        color: white;
+
+
+    }
+
+    textarea::placeholder, input::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+
+
+    }
+
+    textarea:hover::placeholder , input:hover::placeholder {
+        color: white;
+    }
+
+
+    textarea.error::placeholder, input.error::placeholder {
+        color: rgba(236, 123, 123, 0.8);
+
+
+    }
+
+    /* Für Webkit-Browser (Chrome, Safari) */
+    textarea.error::-webkit-input-placeholder, input.error::-webkit-input-placeholder {
+        color: rgba(236, 123, 123, 0.8);
+
+    }
+
+    /* Für Firefox */
+    textarea.error::-moz-placeholder, input.error::-moz-placeholder {
+        color: rgba(236, 123, 123, 0.8);
+    }
+
+    /* Für IE 10+ */
+    textarea.error:-ms-input-placeholder, input.error:-ms-input-placeholder {
+        color: rgba(236, 123, 123, 0.8);
+
+    }

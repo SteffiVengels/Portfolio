@@ -1,52 +1,171 @@
     form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form_group {
+        width: 552px;
         display: flex;
         flex-direction: column;
+        gap: 16px;
+        padding: 32px;
+        cursor: pointer;
+        border-width: 1px 0px;
+        border-style: solid;
+        border-color: rgba(61, 207, 182, 0.5);
+        animation-timing-function: ease-in;
+        animation-duration: 100ms;
+
+        &:hover {
+            border-color: rgba(61, 207, 182, 1);
+
+
+            >input::placeholder {
+                color: white;
+            }
+
+            >input.error::placeholder {
+                color: rgba(236, 123, 123, 0.8);
+            }
+        }
 
         >label {
             font-size: 24px;
             font-family: 'Fira-Code';
             font-weight: 500;
             color: #3DCFB6;
+            cursor: pointer;
         }
     }
 
-    textarea, input {
+
+    input {
         background-color: transparent;
         color: white;
-
-
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
     }
 
-    textarea::placeholder, input::placeholder {
+    input:focus {
+        outline: none;
+        /* Standard-Browser-Umrandung weg */
+        border: none;
+        /* Falls du auch keinen Border willst */
+        box-shadow: none;
+        /* Manche Browser nutzen stattdessen Schatten */
+    }
+
+    .form_group.error {
+        border-color: rgba(61, 207, 182, 1);
+    }
+
+    input::placeholder {
         color: rgba(255, 255, 255, 0.8);
-
-
-    }
-
-    textarea:hover::placeholder , input:hover::placeholder {
-        color: white;
     }
 
 
-    textarea.error::placeholder, input.error::placeholder {
+    input.error::placeholder {
         color: rgba(236, 123, 123, 0.8);
-
-
     }
 
     /* Für Webkit-Browser (Chrome, Safari) */
-    textarea.error::-webkit-input-placeholder, input.error::-webkit-input-placeholder {
+    input.error::-webkit-input-placeholder {
         color: rgba(236, 123, 123, 0.8);
-
     }
 
     /* Für Firefox */
-    textarea.error::-moz-placeholder, input.error::-moz-placeholder {
+    input.error::-moz-placeholder {
         color: rgba(236, 123, 123, 0.8);
     }
 
     /* Für IE 10+ */
-    textarea.error:-ms-input-placeholder, input.error:-ms-input-placeholder {
+    input.error:-ms-input-placeholder {
         color: rgba(236, 123, 123, 0.8);
+    }
+
+    .submit_btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 100px;
+        padding: 13px 24px;
+        font-family: 'Karla';
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.8s ease, border-color 0.8s ease;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        width: fit-content;
+        ;
+
+        span {
+            display: inline-block;
+            white-space: nowrap;
+            position: relative;
+            transform: translateX(0);
+        }
+
+        &:hover:not(:disabled) {
+            cursor: pointer;
+            border-color: rgba(61, 207, 182, 1);
+            color: rgba(61, 207, 182, 1);
+
+            span {
+                animation: scrollText 2.4s linear infinite;
+            }
+        }
+
+        &:disabled {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    @keyframes scrollText {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+
+    .checkbox {
+        width: 616px;
+        flex-direction: row;
+        border: none;
+        padding: 40px 0px 16px 0px;
+        cursor: auto;
+
+        >label {
+            font-family: 'Karla';
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+
+            >a {
+                font-family: 'Fira-Code';
+                font-size: 15px;
+                font-weight: 400;
+                text-decoration: none;
+                color: #3DCFB6;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-color: #3DCFB6;
+                    text-underline-offset: 4px;
+                    color: white;
+                }
+            }
+        }
+
 
     }

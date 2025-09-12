@@ -1,10 +1,69 @@
 footer {
     position: relative;
     bottom: 0;
-    height: 112px;
     width: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_content {
+    width: 100%;
+    margin:0 96px 40px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 126px;
+
+    >p {
+        font-family: 'Fira-Code';
+        font-size: 18px;
+        color:  #3DCFB6;  
+    }
+
+}
+
+
+.footer_left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    >a {
+        background-image: url('./../../../assets/img/logo_wb.png');
+        width: 320px;
+        height: 80px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        bottom: 40px;
+        left: -52px;
+
+        &:hover {
+            background-image: url('./../../../assets/img/logo_wb_hover.png');
+        }
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        >p {
+            margin: 0;
+        }
+    }
 }

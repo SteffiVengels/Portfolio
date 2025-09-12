@@ -2,25 +2,18 @@
     <div class="max-width">
         <div class="contact_me_content">
             <section class="text_container">
-                <span>Kontaktiere mich</span>
-                <h2>Lass uns gemeinsam arbeiten</h2>
+                <span>{{ 'contactMe.section' | translate }}</span>
+                <h2>{{ 'contactMe.title' | translate }}</h2>
                 <div class="text">
-                    <span>Du hast eine Herausforderung?</span>
-                    <p>Ich helfe dir dabei, Lösungen zu entwickeln und echten Mehrwert zu schaffen. <br>
-                        Als Frontend-Entwicklerin bringe ich deine Ideen mit sauberem Code und modernem Design zum Leben.
-                        <br><br>Du brauchst eine Frontend-Entwicklerin? <span>Schreib mir!</span>
+                    <span>{{ 'contactMe.prompt' | translate }}</span>
+                    <p>{{ 'contactMe.general' | translate }}
+                        <br><br>{{ 'contactMe.prompt2' | translate }} <span>{{ 'contactMe.letsTalk' | translate }}</span>
                     </p>
-
                 </div>
-
             </section>
             <section class="form_container">
                 <app-contactform></app-contactform>
-
             </section>
-
         </div>
-
     </div>
-
 </section>

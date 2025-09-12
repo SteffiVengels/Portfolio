@@ -71,5 +71,33 @@
                 "text": "Our project benefited enormously from Simon's efficient way of working."
             }
         }
+    },
+    "contactMe": {
+        "section": "Contact Me",
+        "title": "Let's work together",
+        "prompt": "Got a problem to solve?",
+        "general": "I help you create effective solutions and deliver real value. \nAs a frontend developer, I bring your ideas to life with clean code and modern design.",
+        "prompt2": "Need a frontend developer?",
+        "letsTalk": "Let's talk!"
+    },
+    "contactForm": {
+        "name": "What's your name?",
+        "namePlaceholder": "Your name goes here",
+        "nameError": "Oops! It seems your name is missing.",
+        "email": "What's your email?",
+        "emailPlaceholder": "youremail@email.com",
+        "emailError": "Hoppla! Your email is required",
+        "message": "How can I help you?",
+        "messagePlaceholder": "Hi Steffi, I'm interested in...",
+        "messageError": "What do you need to develop?",
+        "privacy": "privacy policy",
+        "privacyText": "I've read the",
+        "privacyText2": "and agree to the processing of my data as outlined.",
+        "privacyError": "Please accept the privacy policy.",
+        "send": "Say Hello",
+        "success": "Thank you!",
+        "successText": "I've received your message\nand will be in touch soon.",
+        "error": "Oops!",
+        "errorText": "Something went wrong.\nPlease try again."
     }
 }

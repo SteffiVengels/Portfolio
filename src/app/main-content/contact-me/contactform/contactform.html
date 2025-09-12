@@ -1,48 +1,51 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
     <div class="form_group" [ngClass]="{'error': name.invalid && (name.dirty || name.touched)}">
-        <label for="name">Wie heißt du?</label>
+        <label for="name">{{ 'contactForm.name' | translate }}</label>
         <input [(ngModel)]="contactData.name" type="text" id="name" name="name" #name="ngModel" minlength="2"
-            [placeholder]="name.invalid && (name.dirty || name.touched || contactForm.submitted)? 'Ups! Dein Name fehlt noch.': 'Dein Name'"
-            autocomplete="name" required [ngClass]="{'error': name.invalid && (name.dirty || name.touched || contactForm.submitted)}">
+            [placeholder]="name.invalid && (name.dirty || name.touched || contactForm.submitted)? ('contactForm.nameError' | translate): ('contactForm.namePlaceholder' | translate)"
+            autocomplete="name" required
+            [ngClass]="{'error': name.invalid && (name.dirty || name.touched || contactForm.submitted)}">
     </div>
 
     <div class="form_group" [ngClass]="{'error': email.invalid && (email.dirty || email.touched)}">
-        <label for="email">Wie lautet deine E-Mail-Adresse?</label>
+        <label for="email">{{ 'contactForm.email' | translate }}</label>
         <input [(ngModel)]="contactData.email" type="email" id="email" name="email" #email="ngModel"
-            [placeholder]="email.invalid && (email.dirty || email.touched || contactForm.submitted)? 'Hoppla! Bitte gib deine E-Mail-Adresse an.': 'deine@email.de'"
+            [placeholder]="email.invalid && (email.dirty || email.touched || contactForm.submitted)? ('contactForm.emailError' | translate): ('contactForm.emailPlaceholder' | translate)"
             autocomplete="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             [ngClass]="{'error': email.invalid && (email.dirty || email.touched || contactForm.submitted)}">
     </div>
 
     <div class="form_group" [ngClass]="{'error': message.invalid && (message.dirty || message.touched)}">
-        <label for="message">Wie kann ich dir helfen?</label>
+        <label for="message">{{ 'contactForm.message' | translate }}</label>
         <input #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
             [ngClass]="{'error': message.invalid && (message.dirty || message.touched || contactForm.submitted)}"
-            [placeholder]="message.invalid && (message.dirty || message.touched || contactForm.submitted)? 'Worum geht es bei deinem Projekt?': 'Hallo Steffi, ich interessiere mich für...'"
+            [placeholder]="message.invalid && (message.dirty || message.touched || contactForm.submitted)? ('contactForm.messageError' | translate): ('contactForm.messagePlaceholder' | translate)"
             autocomplete="off" required>
     </div>
 
     <div class="privacy">
-        <div class="form_group checkbox" [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)}">
+        <div class="form_group checkbox"
+            [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)}">
             <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
                 required>
-            <label for="privacy">Ich habe die <a href="#" target="_blank">Datenschutzerklärung</a> gelesen und stimme
-                der
-                Verarbeitung meiner Daten wie beschrieben zu.</label>
+            <label for="privacy">{{ 'contactForm.privacyText' | translate }} <a href="#" target="_blank">{{ 'contactForm.privacy' | translate }}</a> {{ 'contactForm.privacyText2' | translate }}</label>
         </div>
-        @if (privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)) {<p class="error_msg">Bitte akzeptiere die
-            Datenschutzerklärung.</p>}
-    </div>
+        @if (privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)) {<p class="error_msg">{{ 'contactForm.privacyError' | translate }}</p>}
+        </div>
 
-
-    <button type="submit" class="submit_btn" >
-        <span>Sag Hallo ;)</span>
+    <button type="submit" class="submit_btn">
+        <span>{{ 'contactForm.send' | translate }} ;)</span>
     </button>
 </form>
 
-
-<div class="feedback" [class.visible]="showFeedback">
-  <p class="success_msg" *ngIf="successMessage">{{ successMessage }}</p>
-  <p class="error_msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+<div class="feedback" [class.visible]="showFeedback" (click)="closeFeedback()">
+    <section class="dialog success_msg" *ngIf="showFeedback && !errorMessage">
+        <span>{{ 'contactForm.success' | translate }}</span>
+        <p>{{ 'contactForm.successText' | translate }}</p>
+    </section>
+    <section class="dialog error_msg" *ngIf="showFeedback && errorMessage">
+        <span>{{ 'contactForm.error' | translate }}</span>
+        <p>{{ 'contactForm.errorText' | translate }}</p>
+    </section>
 </div>

@@ -71,5 +71,33 @@
                 "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise."
             }
         }
+    },
+    "contactMe": {
+        "section": "Kontaktiere mich",
+        "title": "Lass uns gemeinsam arbeiten",
+        "prompt": "Du hast eine Herausforderung?",
+        "general": "Ich helfe dir dabei, Lösungen zu entwickeln und echten Mehrwert zu schaffen. \nAls Frontend-Entwicklerin bringe ich deine Ideen mit sauberem Code und modernem Design zum Leben.",
+        "prompt2": "Du brauchst eine Frontend-Entwicklerin?",
+        "letsTalk": "Schreib mir!"
+    },
+    "contactForm": {
+        "name": "Wie heißt du?",
+        "namePlaceholder": "Dein Name",
+        "nameError": "Ups! Dein Name fehlt noch.",
+        "email": "Wie lautet deine E-Mail-Adresse?",
+        "emailPlaceholder": "deine@email.de",
+        "emailError": "Hoppla! Bitte gib deine E-Mail-Adresse an.",
+        "message": "Wie kann ich dir helfen?",
+        "messagePlaceholder": "Hallo Steffi, ich interessiere mich für...",
+        "messageError": "Worum geht es bei deinem Projekt?",
+        "privacy": "Datenschutzerklärung",
+        "privacyText": "Ich habe die",
+        "privacyText2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu",
+        "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
+        "send": "Sag Hallo",
+        "success": "Vielen Dank!",
+        "successText": "Ich habe deine Nachricht erhalten \nund melde mich in Kürze bei dir.",
+        "error": "Hoppla!",
+        "errorText": "Etwas ist schiefgelaufen. \nBitte versuche es gleich noch einmal."
     }
 }

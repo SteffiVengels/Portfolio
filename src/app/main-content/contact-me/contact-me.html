@@ -12,8 +12,18 @@
                 </div>
             </section>
             <section class="form_container reveal-right">
-                <app-contactform></app-contactform>
+                <app-contactform (feedback)="handleFeedback($event)"></app-contactform>
             </section>
         </div>
     </div>
+    <div class="feedback" [class.visible]="showFeedback" (click)="closeFeedback()">
+    <section class="dialog success_msg" *ngIf="showFeedback && !errorMessage">
+        <span>{{ 'contactForm.success' | translate }}</span>
+        <p>{{ 'contactForm.successText' | translate }}</p>
+    </section>
+    <section class="dialog error_msg" *ngIf="showFeedback && errorMessage">
+        <span>{{ 'contactForm.error' | translate }}</span>
+        <p>{{ 'contactForm.errorText' | translate }}</p>
+    </section>
+</div>
 </section>

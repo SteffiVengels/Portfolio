@@ -17,7 +17,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 96px;
 
     >a {
         display: flex;
@@ -26,6 +25,7 @@ header {
         background-image: url('./../../../assets/img/logo_wb.png');
         background-position: center;
         background-size: cover;
+        margin-right: 96px;
 
         &:hover {
             background-image: url('./../../../assets/img/logo_wb_hover.png') !important;
@@ -77,6 +77,7 @@ header {
     flex-direction: row;
     gap: 24px;
     align-items: center;
+    margin-left: 96px;
 
 
     >a {
@@ -105,5 +106,5 @@ header {
 
 
 .hidden {
-  transform: translateY(-100%);
+    transform: translateY(-100%);
 }

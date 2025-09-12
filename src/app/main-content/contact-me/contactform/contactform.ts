@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,6 +14,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Contactform {
 
+  @Output() feedback = new EventEmitter<{ success: boolean }>();
+
   http = inject(HttpClient);
 
   contactData = {
@@ -26,7 +28,7 @@ export class Contactform {
   constructor(public translate: TranslateService) { }
 
   mailTest = false;
-  showFeedback = false;
+  showFeedback = true;
   errorMessage = false;
 
   post = {
@@ -45,39 +47,19 @@ export class Contactform {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.showSuccessMessage(ngForm);
+            this.feedback.emit({ success: true }); // Erfolg melden
+            ngForm.resetForm();
           },
           error: (error) => {
-            this.showErrorMessage(error);
+            this.feedback.emit({ success: false }); // Fehler melden
+            console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.feedback.emit({ success: true }); // Fake-Erfolg im Testmodus
     }
   }
 
-  showSuccessMessage(ngForm: NgForm) {
-    this.errorMessage = false; // Erfolg
-    this.showFeedback = true;
-    ngForm.resetForm();
-    this.autoHideFeedback();
-  }
-
-  showErrorMessage(error: any) {
-    this.errorMessage = true; // Fehler
-    this.showFeedback = true;
-    this.autoHideFeedback();
-    console.error(error);
-  }
-
-  autoHideFeedback() {
-    setTimeout(() => {
-      this.showFeedback = false;
-    }, 4500); // nach 5 Sekunden ausblenden
-  }
-
-  closeFeedback() {
-    this.showFeedback = false;
-  }
 }

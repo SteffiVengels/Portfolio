@@ -3,40 +3,46 @@
     <div class="form_group" [ngClass]="{'error': name.invalid && (name.dirty || name.touched)}">
         <label for="name">Wie heißt du?</label>
         <input [(ngModel)]="contactData.name" type="text" id="name" name="name" #name="ngModel" minlength="2"
-            [placeholder]="name.invalid && (name.dirty || name.touched)? 'Ups! Dein Name fehlt noch.': 'Dein Name'"
-            autocomplete="name" required [ngClass]="{'error': name.invalid && (name.dirty || name.touched)}">
+            [placeholder]="name.invalid && (name.dirty || name.touched || contactForm.submitted)? 'Ups! Dein Name fehlt noch.': 'Dein Name'"
+            autocomplete="name" required [ngClass]="{'error': name.invalid && (name.dirty || name.touched || contactForm.submitted)}">
     </div>
 
     <div class="form_group" [ngClass]="{'error': email.invalid && (email.dirty || email.touched)}">
         <label for="email">Wie lautet deine E-Mail-Adresse?</label>
         <input [(ngModel)]="contactData.email" type="email" id="email" name="email" #email="ngModel"
-            [placeholder]="email.invalid && (email.dirty || email.touched)? 'Hoppla! Bitte gib deine E-Mail-Adresse an.': 'deine@email.de'"
+            [placeholder]="email.invalid && (email.dirty || email.touched || contactForm.submitted)? 'Hoppla! Bitte gib deine E-Mail-Adresse an.': 'deine@email.de'"
             autocomplete="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            [ngClass]="{'error': email.invalid && (email.dirty || email.touched)}">
+            [ngClass]="{'error': email.invalid && (email.dirty || email.touched || contactForm.submitted)}">
     </div>
 
     <div class="form_group" [ngClass]="{'error': message.invalid && (message.dirty || message.touched)}">
         <label for="message">Wie kann ich dir helfen?</label>
         <input #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
-            [ngClass]="{'error': message.invalid && (message.dirty || message.touched)}"
-            [placeholder]="message.invalid && (message.dirty || message.touched)? 'Worum geht es bei deinem Projekt?': 'Hallo Steffi, ich interessiere mich für...'"
+            [ngClass]="{'error': message.invalid && (message.dirty || message.touched || contactForm.submitted)}"
+            [placeholder]="message.invalid && (message.dirty || message.touched || contactForm.submitted)? 'Worum geht es bei deinem Projekt?': 'Hallo Steffi, ich interessiere mich für...'"
             autocomplete="off" required>
     </div>
 
     <div class="privacy">
-        <div class="form_group checkbox" [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched)}">
+        <div class="form_group checkbox" [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)}">
             <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
                 required>
             <label for="privacy">Ich habe die <a href="#" target="_blank">Datenschutzerklärung</a> gelesen und stimme
                 der
                 Verarbeitung meiner Daten wie beschrieben zu.</label>
         </div>
-        @if (privacy.invalid && (privacy.dirty || privacy.touched)) {<p class="error_msg">Bitte akzeptiere die
+        @if (privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)) {<p class="error_msg">Bitte akzeptiere die
             Datenschutzerklärung.</p>}
     </div>
 
 
-    <button type="submit" class="submit_btn" [disabled]="contactForm.invalid">
+    <button type="submit" class="submit_btn" >
         <span>Sag Hallo ;)</span>
     </button>
 </form>
+
+
+<div class="feedback" [class.visible]="showFeedback">
+  <p class="success_msg" *ngIf="successMessage">{{ successMessage }}</p>
+  <p class="error_msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>

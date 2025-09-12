@@ -61,6 +61,17 @@
         /* Manche Browser nutzen stattdessen Schatten */
     }
 
+    // Autofill fix
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        -webkit-text-fill-color: #fff !important;
+        box-shadow: 0 0 0px 1000px #1c1c1c inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
     .form_group.error {
         border-color: rgba(61, 207, 182, 1);
     }
@@ -138,15 +149,16 @@
         }
     }
 
-    .privacy{
+    .privacy {
         padding: 40px 0px 16px 0px;
+        height: 63px;
     }
 
     .checkbox {
         width: 616px;
         flex-direction: row;
         border: none;
-padding: 0;
+        padding: 0;
         cursor: auto;
 
 
@@ -185,4 +197,62 @@ padding: 0;
         padding-top: 8px;
         color: rgba(236, 123, 123, 1);
         ;
+    }
+
+
+    .feedback {
+        opacity: 0;
+        transition: opacity 1s ease; // 1 Sekunde Fade
+        margin-top: 1rem;
+        font-size: 0.9rem;
+
+        &.visible {
+            opacity: 1;
+        }
+
+        .success_msg {
+            color: #2e7d32; // grün
+        }
+
+        .error_msg {
+            color: #c62828; // rot
+        }
+    }
+
+
+    .form_group.checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 24px;
+            height: 20px;
+            background-color: #1c1c1c;
+            border: 2px solid #3DCFB6;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box; // sehr wichtig!
+            transition: all 0.2s ease;
+
+            &:checked::after {
+                content: '';
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: 4px;
+                height: 10px;
+                border: solid #3DCFB6;
+                border-width: 0 2px 2px 0;
+                transform: translate(-50%, -50%) rotate(45deg); // zentriert Haken
+            }
+
+            &:hover {
+                background-color: rgba(61, 207, 182, 0.3);
+            }
+        }
     }

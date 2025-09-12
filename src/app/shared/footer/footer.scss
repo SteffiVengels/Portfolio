@@ -21,7 +21,7 @@ footer {
 
 .footer_content {
     width: 100%;
-    margin:0 96px 40px 96px;
+    margin: 0 96px 40px 96px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +31,7 @@ footer {
     >p {
         font-family: 'Fira-Code';
         font-size: 18px;
-        color:  #3DCFB6;  
+        color: #3DCFB6;
     }
 
 }
@@ -43,15 +43,13 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     gap: 16px;
+
     >a {
         background-image: url('./../../../assets/img/logo_wb.png');
         width: 320px;
-        height: 80px;
+        height: 126px;
         background-position: center;
-        background-size: cover;
-        position: absolute;
-        bottom: 40px;
-        left: -52px;
+        background-size: 150%;
 
         &:hover {
             background-image: url('./../../../assets/img/logo_wb_hover.png');
@@ -62,8 +60,48 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 8px;
+
         >p {
             margin: 0;
         }
     }
+}
+
+.socials {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    >div {
+
+        >a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                color: #3DCFB6;
+
+                .dot {
+                    display: flex;
+                }
+            }
+        }
+
+    }
+}
+
+.dot {
+    display: none;
+    width: 7px;
+    height: 7px;
+    background-color: #3DCFB6;
+    border-radius: 50%;
 }

@@ -90,7 +90,7 @@ footer {
                 color: #3DCFB6;
 
                 .dot {
-                    display: flex;
+                    opacity: 1;
                 }
             }
         }
@@ -99,9 +99,11 @@ footer {
 }
 
 .dot {
-    display: none;
+    display: flex;
+    opacity: 0;
     width: 7px;
     height: 7px;
     background-color: #3DCFB6;
     border-radius: 50%;
+    transition: all 0.3s ease-out;
 }

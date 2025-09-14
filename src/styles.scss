@@ -19,7 +19,8 @@
 body {
     margin: 0;
     scroll-behavior: smooth;
-    background-color: #1c1c1c;
+    background-image: linear-gradient(to bottom left, #08463b, #1c1c1c 60%);
+    
 
 }
 
@@ -61,6 +62,14 @@ h4 {
     font-size: 32px;
     font-weight: 700;
     color: #3DCFB6;
+    margin: 0;
+}
+
+h6 {
+    font-family: Karla;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
     margin: 0;
 }
 

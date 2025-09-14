@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -10,6 +11,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
-    constructor(public translate: TranslateService) {
+    constructor(private router: Router, public translate: TranslateService) {
+  }
+
+    get isLegalNotice(): boolean {
+    return this.router.url === '/legal-notice';
   }
 }

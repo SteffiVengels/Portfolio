@@ -99,5 +99,8 @@
         "successText": "Ich habe deine Nachricht erhalten \nund melde mich in Kürze bei dir.",
         "error": "Hoppla!",
         "errorText": "Etwas ist schiefgelaufen. \nBitte versuche es gleich noch einmal."
+    },
+    "footer": {
+        "legalNotice": "Impressum"
     }
 }

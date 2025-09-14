@@ -5,7 +5,7 @@
             <h3>{{ 'landingPage.title' | translate }}</h3>
             <div class="title_div">
                 <h1>Stefanie Vengels</h1>
-                <div [class.visible]="showRest">
+                <div [class.visible]="state.showRest()">
                     <a href="#portfolio">
                         <span>{{ 'landingPage.checkmywork' | translate }}</span>
                     </a>
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="marquee" [class.visible]="showRest">
+        <div class="marquee" [class.visible]="state.showRest()">
             <div class="marquee_wrapper">
                 <div class="marquee_content">
                     <span class="dot"></span>
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="right_lateral" [class.visible]="showRest">
+        <div class="right_lateral" [class.visible]="state.showRest()">
             <a href="mailto:contact@stefanie-vengels.dev">contact@stefanie-vengels.dev</a>
             <div class="social_links">
                 <a class="github" href="https://github.com/SteffiVengels" target="_blank"></a>
@@ -45,7 +45,7 @@
             </div>
             <div class="vector"></div>
         </div>
-        <div class="left_lateral" [class.visible]="showRest">
+        <div class="left_lateral" [class.visible]="state.showRest()">
             <a href="#about-me">
                 <img src="assets/img/arrow-down.png" alt="arrow down">
             </a>

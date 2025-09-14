@@ -99,5 +99,8 @@
         "successText": "I've received your message\nand will be in touch soon.",
         "error": "Oops!",
         "errorText": "Something went wrong.\nPlease try again."
-    }
+    },
+        "footer": {
+            "legalNotice": "Legal Notice"
+        }
 }

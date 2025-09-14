@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, RouterOutlet, Router } from '@angular/router';
 import { Header } from './shared/header/header';
 import { MainContent } from './main-content/main-content';
 import { Footer } from './shared/footer/footer';
+import { State } from './services/state';
 
 @Component({
   selector: 'app-root',
@@ -11,40 +12,25 @@ import { Footer } from './shared/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements AfterViewInit {
-  public showRest = false; // Steuerung für andere Elemente
-  protected readonly title = signal('Stefanie Vengels');
+export class App {
+
   hideHeader = false;
   lastScrollTop = 0;
 
-  ngAfterViewInit(): void {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.3 // erst ab 30% sichtbar
-    };
-
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-          obs.unobserve(entry.target); // nur einmal animieren
+  constructor(private router: Router, private state: State) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (event.urlAfterRedirects === '/') {
+          // Landing Page → delay wird in MainContent gesetzt
+        } else {
+          // Andere Routen → Header sofort sichtbar
+          this.state.showRest.set(true);
         }
-      });
-    }, options);
-
-    // Alle Elemente auf der Seite beobachten
-    document.querySelectorAll('.reveal-left, .reveal-right')
-      .forEach(el => observer.observe(el));
-
-
-    // Fade-In Landing Page + Header
-    setTimeout(() => {
-      this.showRest = true; // bindet [class.visible] an Landing Page & Header
-    }, 1000); // Dauer H1/H3 Animation
+      }
+    });
   }
 
-    @HostListener('window:scroll', [])
+  @HostListener('window:scroll', [])
   onScroll() {
     const currentScroll = window.scrollY;
     if (currentScroll > this.lastScrollTop) {

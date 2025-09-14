@@ -1,4 +1,4 @@
-<header [class.visible]="showRest" [class.hidden]="hideHeader">
+<header [class.visible]="state.showRest()" [class.hidden]="hideHeader">
     <div class="max-width">
         <div class="header_left">
             <button class="language_btn" [ngClass]="{'language_en': translate.getCurrentLang() === 'en'}"  (click)="toggleLanguage()"></button>

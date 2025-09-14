@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { State } from '../../services/state';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +12,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './header.scss'
 })
 export class Header {
-  @Input() showRest: boolean = false;
     @Input() hideHeader = false;
   public activeSection: string = '';
 
-  constructor(public translate: TranslateService) {
+  constructor(public state: State, public translate: TranslateService) {
   }
 
 ngOnInit(): void {

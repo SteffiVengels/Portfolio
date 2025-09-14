@@ -14,7 +14,9 @@ export class Footer {
     constructor(private router: Router, public translate: TranslateService) {
   }
 
-    get isLegalNotice(): boolean {
-    return this.router.url === '/legal-notice';
-  }
+private specialRoutes = ['/legal-notice', '/privacy-policy'];
+
+get isSpecialPage(): boolean {
+  return this.specialRoutes.includes(this.router.url);
+}
 }

@@ -1,0 +1,65 @@
+.privacy_policy {
+    color: #3DCFB6;
+    min-height: calc(100vh - 166px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy_policy_content {
+    padding: 149px 96px 144px 96px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+span {
+    color: white;
+}
+
+ul {
+    margin: 0;
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+a {
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #3DCFB6;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #3DCFB6;
+        text-underline-offset: 4px;
+        color: white;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

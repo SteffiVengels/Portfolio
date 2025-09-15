@@ -20,7 +20,7 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     background-image: linear-gradient(to bottom left, #08463b, #1c1c1c 60%);
-    
+
 
 }
 
@@ -160,6 +160,17 @@ header.visible {
 }
 
 
+.privacy_policy_elements a {
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #3DCFB6;
 
-
-
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #3DCFB6;
+        text-underline-offset: 4px;
+        color: white;
+    }
+}

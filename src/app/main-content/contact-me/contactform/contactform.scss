@@ -33,7 +33,7 @@
         }
 
         >label {
-            font-size: 24px;
+            font-size: clamp(20px, 1.5vw, 24px);
             font-family: 'Fira-Code';
             font-weight: 500;
             color: #3DCFB6;
@@ -199,7 +199,7 @@
     }
 
 
-    
+
 
 
     .form_group.checkbox {
@@ -242,4 +242,12 @@
 
     p {
         white-space: pre-line;
+    }
+
+
+    @media (max-width: 1023px) {
+
+        input {
+            font-size: 16px;
+        }
     }

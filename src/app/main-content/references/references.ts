@@ -36,7 +36,7 @@ export class References {
     },
     {
       id: 5,
-      name: 'A. Fischer',
+      name: 'J. Flat',
       role: 'Team Partner',
     },
     {

@@ -37,7 +37,7 @@ body {
 
 h1 {
     font-family: 'Karla';
-    font-size: 128px;
+    font-size: clamp(62px, 8vw, 128px);
     font-weight: 700;
     font-style: bold;
 }
@@ -45,7 +45,7 @@ h1 {
 h2 {
     color: #3DCFB6;
     font-family: 'Fira-Code';
-    font-size: 64px;
+    font-size: clamp(56px, 4vw, 64px);
     font-weight: 700;
     margin: 0;
     padding-bottom: 40px;
@@ -53,13 +53,13 @@ h2 {
 
 h3 {
     font-family: 'Fira-Code';
-    font-size: 40px;
+    font-size: clamp(24px, 2.5vw, 40px);
     font-weight: 400;
 }
 
 h4 {
     font-family: 'Fira-Code';
-    font-size: 32px;
+    font-size: clamp(24px, 2vw, 32px);
     font-weight: 700;
     color: #3DCFB6;
     margin: 0;
@@ -172,5 +172,13 @@ header.visible {
         text-decoration-color: #3DCFB6;
         text-underline-offset: 4px;
         color: white;
+    }
+}
+
+
+@media (max-width: 1023px) {
+
+    h2 {
+        line-height: 80%;
     }
 }

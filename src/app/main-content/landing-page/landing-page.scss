@@ -109,7 +109,7 @@ a {
 .marquee_text {
     color: rgba(61, 207, 182, 1);
     font-family: 'Karla';
-    font-size: 32px;
+    font-size: clamp(24px, 2vw, 32px);
     font-weight: 400;
 }
 
@@ -160,7 +160,7 @@ a {
 
 .right_lateral {
     position: absolute;
-    right: 84px;
+    right: clamp(4px, 3vw, 84px);
     bottom: 0;
     display: flex;
     align-items: center;
@@ -223,7 +223,7 @@ a {
 
 .left_lateral {
     position: absolute;
-    left: 96px;
+    left: clamp(16px, 5vw, 96px);
     bottom: 0;
     display: flex;
     flex-direction: column;

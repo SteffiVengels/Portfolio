@@ -27,8 +27,8 @@ footer {
 .footer_content {
     width: 100%;
     padding-bottom: 40px;
-    padding-left: clamp(16px, 5vw, 96px);
-    padding-right: clamp(16px, 5vw, 96px);
+
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,6 +50,7 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     gap: 16px;
+    padding-left: clamp(16px, 5vw, 96px);
 
     >a {
         background-image: url('./../../../assets/img/logo_wb.png');
@@ -80,6 +81,7 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
+    padding-right: clamp(16px, 5vw, 96px);
 
     >div {
 
@@ -113,4 +115,36 @@ footer {
     background-color: #3DCFB6;
     border-radius: 50%;
     transition: all 0.3s ease-out;
+}
+
+.p_mobile {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+
+    .max-width {
+        flex-direction: column;
+    }
+
+    .footer_content {
+        padding-bottom: 0;
+        >p {
+            display: none;
+        }
+    }
+
+    .p_mobile {
+        display: flex;
+        font-family: 'Fira-Code';
+        font-size: 18px;
+        color: #3DCFB6;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .socials {
+        width: fit-content;
+    }
 }

@@ -27,13 +27,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: clamp(16px, 5vw, 96px);
+    gap: clamp(40px, 5vw, 96px);
     overflow: hidden;
 }
 
 .picture_container {
     position: relative;
     width: clamp(358px, 40vw, 568px);
+    height: clamp(358px, 40vw, 568px);
 
     >img {
         position: absolute;
@@ -131,5 +132,9 @@
     .about_me_content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .text_container {
+        margin-top: 0;
     }
 }

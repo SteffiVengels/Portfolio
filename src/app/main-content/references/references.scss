@@ -36,6 +36,7 @@
     margin: 42px 0;
     gap: 64px;
     overflow-x: clip;
+    position: relative;
 }
 
 .arrows {
@@ -43,6 +44,7 @@
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    z-index: 1000;
 }
 
 .dot {
@@ -158,8 +160,8 @@
 
 .shadow {
     position: absolute;
-    top: 84px;
-    bottom: 220px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
@@ -193,8 +195,29 @@
 
 @media (max-width: 1023px) {
 
+    .carousel {
+height: clamp(
+  178px + 98px,                    /* min + 98 */
+  calc((288.57px - 7.67857vw) + 98px), /* fluid + 98 */
+  264px + 98px                     /* max + 98 */
+);
+
+    }
+
     .card {
         font-size: 18px;
+        width: 50%;
+        min-width: 300px;
+        height: clamp(178px, calc(288.57px - 7.67857vw), 264px);
+    }
+
+    .quotes {
+        width: calc(50% + 80px);
+        height: clamp(
+  178px + 98px,                    /* min + 98 */
+  calc((288.57px - 7.67857vw) + 98px), /* fluid + 98 */
+  264px + 98px                     /* max + 98 */
+);
     }
 
 }

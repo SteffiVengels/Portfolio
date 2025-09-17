@@ -25,7 +25,7 @@
     padding-left: clamp(16px, 5vw, 96px);
     padding-right: clamp(16px, 5vw, 96px);
     padding-bottom: clamp(100px, 10vw, 144px);
-    gap: clamp(16px, 5vw, 96px);
+    gap: clamp(40px, 5vw, 96px);
     overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 520px;
+    flex: 1;
 
     >span {
         color: #3DCFB6;
@@ -240,5 +240,14 @@ strong {
 
     .strong {
         font-size: 20px;
+    }
+
+    .skills_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon_container {
+        justify-content: center;
     }
 }

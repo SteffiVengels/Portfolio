@@ -48,7 +48,7 @@
 
     >div {
         display: flex;
-        gap: 48px;
+        gap: clamp(24px, 5vw, 48px);
     }
 }
 
@@ -298,6 +298,7 @@ h1.shiny {
 .title_container h3 {
     opacity: 0;
     animation: fadeInTitle 1s forwards;
+    text-align: center;
 }
 
 @keyframes fadeInTitle {
@@ -310,4 +311,40 @@ h1.shiny {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (max-width: 767px) {
+
+.email_text {
+    display: none;
+}
+
+.email_img {
+    background-image: url('./../../../assets/img/social icons/Mail.png');
+
+    &:hover  {
+        background-image: url('./../../../assets/img/social icons/Mail Hover.png');
+    }
+}
+}
+
+@media (max-width: 540px) {
+
+    .right_lateral {
+        >.vector {
+            height: 112px;
+        }
+    }
+
+    .left_lateral {
+        >.vector {
+            height: 224px;
+        }
+    }
+
+    .marquee {
+        bottom: 40px;
+    }
+
+
 }

@@ -167,6 +167,12 @@ header {
         flex-direction: row-reverse;
     }
 
+    .max-width {
+        >a {
+            margin-right: 0;
+        }
+    }
+
     .header_left {
         display: none;
     }

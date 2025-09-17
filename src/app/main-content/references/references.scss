@@ -221,3 +221,10 @@ height: clamp(
     }
 
 }
+
+@media (max-width: 767px) {
+
+    h4 {
+        text-align: center;
+    }
+}

@@ -1,17 +1,44 @@
 <header [class.visible]="state.showRest()" [class.hidden]="hideHeader">
     <div class="max-width">
         <div class="header_left">
-            <button class="language_btn" [ngClass]="{'language_en': translate.getCurrentLang() === 'en'}"  (click)="toggleLanguage()"></button>
-            <a href="#about-me" class="nav_link" [ngClass]="{'active': isActive('about')}" (click)="activeSection = 'about'">{{ 'header.aboutme' | translate }}
+            <button class="language_btn" [ngClass]="{'language_en': translate.getCurrentLang() === 'en'}"
+                (click)="toggleLanguage()"></button>
+            <a href="#about-me" class="nav_link" [ngClass]="{'active': isActive('about')}"
+                (click)="activeSection = 'about'">{{ 'header.aboutme' | translate }}
                 <div class="dot"></div>
             </a>
-            <a href="#skills" class="nav_link" [ngClass]="{'active': isActive('skills')}" (click)="activeSection = 'skills'">{{ 'header.skills' | translate }}
+            <a href="#skills" class="nav_link" [ngClass]="{'active': isActive('skills')}"
+                (click)="activeSection = 'skills'">{{ 'header.skills' | translate }}
                 <div class="dot"></div>
             </a>
-            <a href="#portfolio" class="nav_link" [ngClass]="{'active': isActive('projects')}" (click)="activeSection = 'projects'">{{ 'header.portfolio' | translate }}
+            <a href="#portfolio" class="nav_link" [ngClass]="{'active': isActive('projects')}"
+                (click)="activeSection = 'projects'">{{ 'header.portfolio' | translate }}
                 <div class="dot"></div>
             </a>
         </div>
+        <div class="header_mobile" (click)="toggleMobileMenu()"></div>
+
         <a href="#landing-page"></a>
     </div>
+
+    <div class="mobile_menu" [class.open]="isMobileMenuOpen" (click)="toggleMobileMenu()">
+        <div class="mobile_menu_dialog" (click)="$event.stopPropagation()">
+            <a href="#about-me" class="nav_link" [ngClass]="{'active': isActive('about')}"
+                (click)="activeSection = 'about'; toggleMobileMenu()">{{ 'header.aboutme' | translate }}
+                <div class="dot"></div>
+            </a>
+            <a href="#skills" class="nav_link" [ngClass]="{'active': isActive('skills')}"
+                (click)="activeSection = 'skills'; toggleMobileMenu()">{{ 'header.skills' | translate }}
+                <div class="dot"></div>
+            </a>
+            <a href="#portfolio" class="nav_link" [ngClass]="{'active': isActive('projects')}"
+                (click)="activeSection = 'projects'; toggleMobileMenu()">{{ 'header.portfolio' | translate }}
+                <div class="dot"></div>
+            </a>
+            <button class="language_btn" [ngClass]="{'language_en': translate.getCurrentLang() === 'en'}"
+                (click)="toggleLanguage()"></button>
+        </div>
+
+    </div>
+
 </header>

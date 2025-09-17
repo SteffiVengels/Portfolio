@@ -14,6 +14,7 @@ import { State } from '../../services/state';
 export class Header {
     @Input() hideHeader = false;
   public activeSection: string = '';
+  public isMobileMenuOpen: boolean = false;
 
   constructor(public state: State, public translate: TranslateService) {
   }
@@ -32,5 +33,9 @@ ngOnInit(): void {
     const newLang = currentLang === 'de' ? 'en' : 'de';
     this.translate.use(newLang);
     localStorage.setItem('lang', newLang);
+  }
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    document.body.classList.toggle('no-scroll');
   }
 }

@@ -13,7 +13,7 @@ footer {
 }
 
 .footer-legal {
-  background-color: transparent; // Legal Notice
+    background-color: transparent; // Legal Notice
 }
 
 .max-width {
@@ -26,7 +26,9 @@ footer {
 
 .footer_content {
     width: 100%;
-    margin: 0 96px 40px 96px;
+    padding-bottom: 40px;
+    padding-left: clamp(16px, 5vw, 96px);
+    padding-right: clamp(16px, 5vw, 96px);
     display: flex;
     align-items: center;
     justify-content: space-between;

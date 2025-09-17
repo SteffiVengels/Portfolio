@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 144px;
+    padding-bottom: clamp(100px, 10vw, 144px);
 
 }
 

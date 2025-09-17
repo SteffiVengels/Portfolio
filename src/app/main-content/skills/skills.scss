@@ -22,9 +22,11 @@
     justify-content: space-between;
     width: 100%;
     min-height: 695px;
-    padding: 0 96px;
-    padding-bottom: 144px;
-    gap: 96px;
+    padding-left: clamp(16px, 5vw, 96px);
+    padding-right: clamp(16px, 5vw, 96px);
+    padding-bottom: clamp(100px, 10vw, 144px);
+    gap: clamp(16px, 5vw, 96px);
+    overflow: hidden;
 }
 
 .text_container {
@@ -125,7 +127,8 @@ strong {
     align-items: flex-start;
     flex-wrap: wrap;
     height: fit-content;
-    gap: 32px 72px;
+    row-gap: clamp(16px, 2vw, 32px);
+    column-gap: clamp(24px, 5vw, 72px);
 
 
 

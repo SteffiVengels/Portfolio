@@ -13,6 +13,7 @@
 
 .dialog {
     display: flex;
+    flex-direction: row-reverse;
     padding: 64px;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     border: 1px solid #3DCFB6;
@@ -23,11 +24,18 @@
     transform: translateY(-50px); // Startpunkt oben
     opacity: 0; // unsichtbar am Anfang
     transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 
     &.open {
         transform: translateY(0); // Endposition
         opacity: 1; // sichtbar
     }
+}
+
+.dialog::-webkit-scrollbar-track {
+    margin: 0px 210px;
 }
 
 .content_left {
@@ -182,7 +190,13 @@
     }
 }
 
-@media (max-width: 1023px) {
+.mobile {
+    display: none;
+}
+
+
+
+@media (max-width: 1239px) {
 
     .content_right {
         >img {
@@ -227,31 +241,42 @@
     .dialog {
         padding: 32px;
     }
+
+
 }
 
 @media (max-width: 900px) {
 
     .dialog {
-        flex-direction: column-reverse;
-        max-height: fit-content;
+        flex-direction: column;
+        max-height: calc(100vh - 64px);
         width: 380px;
     }
 
     .content_right {
+        min-height: fit-content;
+
         >img {
             margin-left: 0;
             margin-right: 19px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-radius: 16px;
         }
     }
 
     .next_btn {
-        position: absolute;
-        bottom: 32px;
+        display: none;
     }
 
-    .content_left {
-        margin-bottom: 56px;
+    .mobile {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        margin-top: 32px;
     }
+
+
 
     .links {
         display: flex;
@@ -267,7 +292,7 @@
     }
 
     .dialog {
-        overflow-y: scroll;
+
         padding: 12px;
         width: clamp(300px,
                 calc(380px + (300 - 380) * ((480px - 100vw) / (480 - 320))),
@@ -285,6 +310,7 @@
             margin-right: 0;
             height: auto;
             width: 100%;
+
         }
     }
 

@@ -1,5 +1,11 @@
 <section class="portfolio_overlay" *ngIf="selectedProject">
-    <div class="dialog"  [class.open]="isOpen">
+    <div class="dialog" [class.open]="isOpen">
+        <section class="content_right">
+            <button class="close_btn" (click)="closeDialog()"></button>
+            <img src="{{ selectedProject.imageDialog }}" alt="Screenshot der {{ selectedProject.title }} Applikation">
+            <button class="next_btn" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
+                }}<span></span></button>
+        </section>
         <section class="content_left">
             <span>{{ number }}</span>
             <h2 lang="de">{{ selectedProject.title }}</h2>
@@ -14,14 +20,14 @@
                 </div>
             </div>
             <div class="links">
-                <a href="{{ selectedProject.github }}" target="_blank">GitHub<img src="/assets/img/arrow_forward.png" alt="arrow"></a>
-                <a href="{{ selectedProject.subdomain }}" target="_blank">Live Test<img src="/assets/img/arrow_forward.png" alt="arrow"></a>
+                <a href="{{ selectedProject.github }}" target="_blank">GitHub<img src="/assets/img/arrow_forward.png"
+                        alt="arrow"></a>
+                <a href="{{ selectedProject.subdomain }}" target="_blank">Live Test<img
+                        src="/assets/img/arrow_forward.png" alt="arrow"></a>
             </div>
+            <button class="next_btn mobile" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
+                }}<span></span></button>
         </section>
-        <section class="content_right">
-            <button class="close_btn" (click)="closeDialog()"></button>
-            <img src="{{ selectedProject.imageDialog }}" alt="Screenshot der {{ selectedProject.title }} Applikation">
-            <button class="next_btn" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate }}<span></span></button>
-        </section>
+
     </div>
 </section>

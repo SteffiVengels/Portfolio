@@ -82,17 +82,17 @@ body {
 }
 
 /* Webkit-Browser (Chrome, Safari) */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: var(--sb-size);
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--sb-track-color);
     border-radius: 0;
     /* Track eckig → keine weißen Punkte */
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 8px;
     /* nur Thumb rund */

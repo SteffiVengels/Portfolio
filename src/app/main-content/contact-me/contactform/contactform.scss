@@ -150,7 +150,7 @@
     }
 
     .privacy {
-        padding: 40px 0px 16px 0px;
+        padding: 40px 0px;
     }
 
     .checkbox {
@@ -255,5 +255,9 @@
         .form_group {
             padding: 32px 16px;
             width: calc(100% - 32px);
+        }
+
+        .privacy {
+            padding: 0;
         }
     }

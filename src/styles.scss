@@ -166,6 +166,10 @@ header.visible {
     font-weight: 400;
     text-decoration: none;
     color: #3DCFB6;
+    word-wrap: break-word;
+    /* Alte Variante, funktioniert überall */
+    overflow-wrap: break-word;
+    /* Moderne Variante */
 
     &:hover {
         text-decoration: underline;

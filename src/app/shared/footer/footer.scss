@@ -33,7 +33,6 @@ footer {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    height: 126px;
 
     >p {
         font-family: 'Fira-Code';
@@ -129,6 +128,7 @@ footer {
 
     .footer_content {
         padding-bottom: 0;
+
         >p {
             display: none;
         }
@@ -147,4 +147,28 @@ footer {
     .socials {
         width: fit-content;
     }
+}
+
+@media (max-width: 480px) {
+
+    .footer_content {
+        flex-direction: column;
+    }
+
+    .socials {
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .footer_left {
+        padding-left: 0;
+
+        >a {
+            width: 90vw;
+            max-width: 320px;
+        }
+    }
+
+
+
 }

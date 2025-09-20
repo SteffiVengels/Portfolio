@@ -196,6 +196,10 @@ a {
     }
 }
 
+.email_img {
+    display: none;
+}
+
 .linkedin {
     background-image: url('./../../../assets/img/social icons/Linkedin.png');
 
@@ -315,17 +319,18 @@ h1.shiny {
 
 @media (max-width: 767px) {
 
-.email_text {
-    display: none;
-}
-
-.email_img {
-    background-image: url('./../../../assets/img/social icons/Mail.png');
-
-    &:hover  {
-        background-image: url('./../../../assets/img/social icons/Mail Hover.png');
+    .email_text {
+        display: none;
     }
-}
+
+    .email_img {
+        display: flex;
+        background-image: url('./../../../assets/img/social icons/Mail.png');
+
+        &:hover {
+            background-image: url('./../../../assets/img/social icons/Mail Hover.png');
+        }
+    }
 }
 
 @media (max-width: 540px) {
@@ -344,6 +349,23 @@ h1.shiny {
 
     .marquee {
         bottom: 40px;
+    }
+
+
+}
+
+@media (max-width: 380px) {
+
+    .title_div {
+        >div {
+            flex-direction: column;
+            align-items: center;
+
+            >a {
+                width: fit-content;
+            }
+        }
+
     }
 
 

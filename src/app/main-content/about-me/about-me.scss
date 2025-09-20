@@ -138,3 +138,19 @@
         margin-top: 0;
     }
 }
+
+@media (max-width: 420px) {
+
+
+.picture_container {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1/1;  
+
+    >img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1/1;
+    }
+}
+}

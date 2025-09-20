@@ -190,17 +190,21 @@
         position: absolute;
         top: -10px;
         left: -44px;
+        width: clamp(66px, calc(2.13vw + 59.2px), 90px);
+        height: auto;
     }
 }
 
 @media (max-width: 1023px) {
 
     .carousel {
-height: clamp(
-  178px + 98px,                    /* min + 98 */
-  calc((288.57px - 7.67857vw) + 98px), /* fluid + 98 */
-  264px + 98px                     /* max + 98 */
-);
+        height: clamp(178px + 98px,
+                /* min + 98 */
+                calc((288.57px - 7.67857vw) + 98px),
+                /* fluid + 98 */
+                264px + 98px
+                /* max + 98 */
+            );
 
     }
 
@@ -213,11 +217,13 @@ height: clamp(
 
     .quotes {
         width: calc(50% + 80px);
-        height: clamp(
-  178px + 98px,                    /* min + 98 */
-  calc((288.57px - 7.67857vw) + 98px), /* fluid + 98 */
-  264px + 98px                     /* max + 98 */
-);
+        height: clamp(178px + 98px,
+                /* min + 98 */
+                calc((288.57px - 7.67857vw) + 98px),
+                /* fluid + 98 */
+                264px + 98px
+                /* max + 98 */
+            );
     }
 
 }
@@ -226,5 +232,55 @@ height: clamp(
 
     h4 {
         text-align: center;
+    }
+
+    .card {
+        height: clamp(244px,
+                calc(244px + (380 - 244) * ((767px - 100vw) / (767 - 480))),
+                380px);
+        min-width: 50%;
+
+    }
+
+    .carousel {
+        height: clamp(244px + 98px,
+                calc(244px + (380 - 244) * ((767px - 100vw) / (767 - 480)) + 98px),
+                380px + 98px);
+    }
+
+    .quotes {
+        height: clamp(244px + 98px,
+                calc(244px + (380 - 244) * ((767px - 100vw) / (767 - 480)) + 98px),
+                380px + 98px);
+
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .shadow {
+        display: none;
+    }
+    
+    .card {
+        height: clamp(260px,
+                calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300))),
+                540px);
+        min-width: calc(100vw - 130px);
+    }
+
+    .carousel {
+        height: clamp(260px + 98px,
+                calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300)) + 98px),
+                540px + 98px);
+    }
+
+    .quotes {
+        height: clamp(260px + 98px,
+                calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300)) + 98px),
+                540px + 98px);
+
+        min-width: calc(100vw - 130px);
     }
 }

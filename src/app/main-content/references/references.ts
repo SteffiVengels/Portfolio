@@ -16,34 +16,34 @@ export class References {
   feedbackList = [
     {
       id: 1,
-      name: 'H. Janisch',
+      name: 'A. Eigner',
       role: 'Team Partner',
     },
     {
       id: 2,
-      name: 'A. Fischer',
+      name: 'K. Kukowin',
       role: 'Team Partner',
     },
     {
       id: 3,
-      name: 'T. Schulz',
-      role: 'Frontend Developer',
-    },
-    {
-      id: 4,
-      name: 'H. Janisch',
+      name: 'J. Katanek',
       role: 'Team Partner',
     },
     {
-      id: 5,
+      id: 4,
       name: 'J. Flat',
       role: 'Team Partner',
     },
     {
+      id: 5,
+      name: 'K. Kukowin',
+      role: 'Team Partner',
+    },
+    {
       id: 6,
-      name: 'T. Schulz',
-      role: 'Frontend Developer',
-    }
+      name: 'J. Katanek',
+      role: 'Team Partner',
+    },
   ];
 
   constructor(public translate: TranslateService) {

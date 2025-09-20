@@ -53,22 +53,22 @@
         "title": "What my colleagues say about me",
         "feedback": {
             "1": {
-                "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project."
+                "text": "Working with Steffi has been a great pleasure. She combines reliability, efficiency, and helpfulness with team spirit and empathy. Thanks to her open communication and commitment, she creates a work environment where projects move forward successfully and problems always find a solution."
             },
             "2": {
-                "text": "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He is super knowledgeable, easy to work with, and I'd happily work with him again given the chance."
+                "text": "Working with Stefanie has been a true pleasure. I was especially impressed by her extensive knowledge and her ability to independently find solutions — always thinking outside the box and offering support whenever needed. She combines expertise with team spirit, making collaboration both effective and enjoyable."
             },
             "3": {
-                "text": "Our project benefited enormously from Simon's efficient way of working."
+                "text": "Steffi has proven to be a helpful and valuable support when it comes to process investigation and improvement, focussing on solution-oriented approaches and efficient data processing"
             },
             "4": {
-                "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project."
-            },
-            "5": {
                 "text": "Our project was a smooth experience, thanks to Steffi’s open communication and ideas."
             },
+            "5": {
+                "text": "Working with Stefanie has been a true pleasure. I was especially impressed by her extensive knowledge and her ability to independently find solutions — always thinking outside the box and offering support whenever needed. She combines expertise with team spirit, making collaboration both effective and enjoyable."
+            },
             "6": {
-                "text": "Our project benefited enormously from Simon's efficient way of working."
+                "text": "Steffi has proven to be a helpful and valuable support when it comes to process investigation and improvement, focussing on solution-oriented approaches and efficient data processing"
             }
         }
     },

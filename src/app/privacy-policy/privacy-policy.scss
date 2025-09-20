@@ -15,13 +15,28 @@
 }
 
 .privacy_policy_content {
-    padding: 149px 96px 144px 96px;
+    padding-top: clamp(110px, 10vw, 154px);
+    /* falls oben kein Padding gewünscht */
+
+    /* right/left */
+    padding-left: clamp(16px, 5vw, 96px);
+    padding-right: clamp(16px, 5vw, 96px);
+
+    /* bottom */
+    padding-bottom: clamp(100px, 10vw, 144px);
     width: 100%;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 h2 {
     text-align: center;
     font-size: clamp(32px, 5vw, 64px);
+
+    hyphens: auto;
+    overflow-wrap: break-word;
+
 }
 
 p {
@@ -64,5 +79,3 @@ a {
     flex-direction: column;
     gap: 24px;
 }
-
-

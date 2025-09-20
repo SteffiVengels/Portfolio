@@ -15,7 +15,15 @@
 }
 
 .legal_notice_content {
-    padding: 149px 96px 144px 96px;
+        padding-top: clamp(110px, 10vw, 154px);
+    /* falls oben kein Padding gewünscht */
+
+    /* right/left */
+    padding-left: clamp(16px, 5vw, 96px);
+    padding-right: clamp(16px, 5vw, 96px);
+
+    /* bottom */
+    padding-bottom: clamp(100px, 10vw, 144px);
     width: 100%;
 }
 

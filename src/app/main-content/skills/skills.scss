@@ -127,6 +127,7 @@ strong {
     align-items: flex-start;
     flex-wrap: wrap;
     height: fit-content;
+    width: clamp(358px, 40vw, 568px);
     row-gap: clamp(16px, 2vw, 32px);
     column-gap: clamp(24px, 5vw, 72px);
 
@@ -234,6 +235,11 @@ strong {
 
 @media (max-width: 1023px) {
 
+    h2 {
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
     .text>p {
         font-size: 16px;
     }
@@ -249,5 +255,6 @@ strong {
 
     .icon_container {
         justify-content: center;
+        width: 100%;
     }
 }

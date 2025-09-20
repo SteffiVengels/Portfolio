@@ -53,22 +53,22 @@
         "title": "Das sagen meine Kolleg:innen über mich",
         "feedback": {
             "1": {
-                "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts."
+                "text": "Mit Steffi zusammenzuarbeiten war mir eine große Freude. Sie verbindet Zuverlässigkeit, Effizienz und Hilfsbereitschaft mit Teamgeist und Empathie. Dank ihrer offenen Kommunikation und ihres Engagements schafft sie ein Arbeitsumfeld, in dem Projekte erfolgreich vorankommen und Probleme immer eine Lösung finden."
             },
             "2": {
-                "text": "Ich hatte das Glück, mit Lukas in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Einsatz erforderte. Er blieb immer ruhig, gelassen und fokussiert und sorgte dafür, dass unser Team gut aufgestellt war. Er ist sehr kompetent, angenehm im Umgang und ich würde jederzeit wieder mit ihm zusammenarbeiten."
+                "text": "Die Zusammenarbeit mit Stefanie war für mich eine große Bereicherung. Besonders beeindruckt hat mich ihr umfangreiches Wissen und ihre Fähigkeit, selbstständig nach Lösungen zu suchen – dabei denkt sie gerne über den Tellerrand hinaus und unterstützt jederzeit, wenn Hilfe gebraucht wird. Sie verbindet Kompetenz mit Teamgeist und macht die gemeinsame Arbeit dadurch sehr angenehm."
             },
             "3": {
-                "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise."
+                "text": "Steffi hat sich in der Zusammenarbeit als wertvolle und hilfreiche Unterstützung erwiesen, wenn es um die Analyse und Verbesserung von Prozessen ging - immer mit dem Fokus auf lösungsorientierte Ansätze und effiziente Datenverarbeitung"
             },
             "4": {
-                "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts."
-            },
-            "5": {
                 "text": "Unser Projekt verlief reibungslos, unter anderem dank der offenen Kommunikation und der Ideen von Steffi."
             },
+            "5": {
+                "text": "Die Zusammenarbeit mit Stefanie war für mich eine große Bereicherung. Besonders beeindruckt hat mich ihr umfangreiches Wissen und ihre Fähigkeit, selbstständig nach Lösungen zu suchen – dabei denkt sie gerne über den Tellerrand hinaus und unterstützt jederzeit, wenn Hilfe gebraucht wird. Sie verbindet Kompetenz mit Teamgeist und macht die gemeinsame Arbeit dadurch sehr angenehm."
+            },
             "6": {
-                "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise."
+                "text": "Steffi hat sich in der Zusammenarbeit als wertvolle und hilfreiche Unterstützung erwiesen, wenn es um die Analyse und Verbesserung von Prozessen ging - immer mit dem Fokus auf lösungsorientierte Ansätze und effiziente Datenverarbeitung"
             }
         }
     },

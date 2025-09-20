@@ -2,7 +2,7 @@
     <div class="dialog"  [class.open]="isOpen">
         <section class="content_left">
             <span>{{ number }}</span>
-            <h2>{{ selectedProject.title }}</h2>
+            <h2 lang="de">{{ selectedProject.title }}</h2>
             <div class="about_the_project">
                 <p class="headline">{{ 'portfolioDialog.question' | translate }}</p>
                 <p class="description">{{ ('projects.' + selectedProject.title + '.description') | translate }}</p>

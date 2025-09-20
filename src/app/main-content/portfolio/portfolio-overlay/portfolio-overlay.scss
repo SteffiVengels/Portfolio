@@ -13,7 +13,7 @@
 
 .dialog {
     display: flex;
-    flex-direction: row-reverse;
+
     padding: 64px;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     border: 1px solid #3DCFB6;
@@ -24,8 +24,7 @@
     transform: translateY(-50px); // Startpunkt oben
     opacity: 0; // unsichtbar am Anfang
     transition: transform 0.3s ease, opacity 0.3s ease;
-    overflow-y: auto;
-    overflow-x: hidden;
+overflow: hidden;
 
 
     &.open {
@@ -34,8 +33,11 @@
     }
 }
 
-.dialog::-webkit-scrollbar-track {
-    margin: 0px 210px;
+.dialog_scrollbar {
+        display: flex;
+    flex-direction: row-reverse;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .content_left {
@@ -248,9 +250,13 @@
 @media (max-width: 900px) {
 
     .dialog {
-        flex-direction: column;
+   
         max-height: calc(100vh - 64px);
         width: 380px;
+    }
+
+    .dialog_scrollbar {
+        flex-direction: column;
     }
 
     .content_right {
@@ -284,6 +290,28 @@
     }
 }
 
+@media (max-width: 580px) {
+        .content_right {
+        min-height: fit-content;
+
+        >img {
+            width: 100%;
+            margin-right: 0;
+            height: auto;
+            width: 100%;
+
+        }
+    }
+
+        .links {
+        gap: 16px;
+
+        >a {
+            padding: 13px 18px;
+        }
+    }
+}
+
 @media (max-width: 480px) {
 
     h2 {
@@ -302,30 +330,14 @@
 
     }
 
-    .content_right {
-        min-height: fit-content;
 
-        >img {
-            width: 100%;
-            margin-right: 0;
-            height: auto;
-            width: 100%;
-
-        }
-    }
 
     .next_btn {
 
         bottom: 12px;
     }
 
-    .links {
-        gap: 16px;
 
-        >a {
-            padding: 13px 18px;
-        }
-    }
 
 
 }

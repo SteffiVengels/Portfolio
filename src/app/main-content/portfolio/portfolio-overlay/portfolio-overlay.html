@@ -1,33 +1,35 @@
 <section class="portfolio_overlay" *ngIf="selectedProject">
     <div class="dialog" [class.open]="isOpen">
-        <section class="content_right">
-            <button class="close_btn" (click)="closeDialog()"></button>
-            <img src="{{ selectedProject.imageDialog }}" alt="Screenshot der {{ selectedProject.title }} Applikation">
-            <button class="next_btn" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
-                }}<span></span></button>
-        </section>
-        <section class="content_left">
-            <span>{{ number }}</span>
-            <h2 lang="de">{{ selectedProject.title }}</h2>
-            <div class="about_the_project">
-                <p class="headline">{{ 'portfolioDialog.question' | translate }}</p>
-                <p class="description">{{ ('projects.' + selectedProject.title + '.description') | translate }}</p>
-                <div class="skills">
-                    <ng-container *ngFor="let skill of selectedProject.skills; let i = index">
-                        <img [src]="'/assets/img/skills/dialog/' + skill + '.png'" [alt]="skill">
-                        <span>{{ skill }}</span>
-                    </ng-container>
+        <div class="dialog_scrollbar">
+            <section class="content_right">
+                <button class="close_btn" (click)="closeDialog()"></button>
+                <img src="{{ selectedProject.imageDialog }}"
+                    alt="Screenshot der {{ selectedProject.title }} Applikation">
+                <button class="next_btn" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
+                    }}<span></span></button>
+            </section>
+            <section class="content_left">
+                <span>{{ number }}</span>
+                <h2 lang="de">{{ selectedProject.title }}</h2>
+                <div class="about_the_project">
+                    <p class="headline">{{ 'portfolioDialog.question' | translate }}</p>
+                    <p class="description">{{ ('projects.' + selectedProject.title + '.description') | translate }}</p>
+                    <div class="skills">
+                        <ng-container *ngFor="let skill of selectedProject.skills; let i = index">
+                            <img [src]="'/assets/img/skills/dialog/' + skill + '.png'" [alt]="skill">
+                            <span>{{ skill }}</span>
+                        </ng-container>
+                    </div>
                 </div>
-            </div>
-            <div class="links">
-                <a href="{{ selectedProject.github }}" target="_blank">GitHub<img src="/assets/img/arrow_forward.png"
-                        alt="arrow"></a>
-                <a href="{{ selectedProject.subdomain }}" target="_blank">Live Test<img
-                        src="/assets/img/arrow_forward.png" alt="arrow"></a>
-            </div>
-            <button class="next_btn mobile" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
-                }}<span></span></button>
-        </section>
-
+                <div class="links">
+                    <a href="{{ selectedProject.github }}" target="_blank">GitHub<img
+                            src="/assets/img/arrow_forward.png" alt="arrow"></a>
+                    <a href="{{ selectedProject.subdomain }}" target="_blank">Live Test<img
+                            src="/assets/img/arrow_forward.png" alt="arrow"></a>
+                </div>
+                <button class="next_btn mobile" (click)="nextProject()">{{ 'portfolioDialog.next_button' | translate
+                    }}<span></span></button>
+            </section>
+        </div>
     </div>
 </section>

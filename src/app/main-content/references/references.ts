@@ -85,4 +85,21 @@ getCardClass(index: number): string {
   if (index === next2) return 'next2';
   return 'hidden';
 }
+
+private startX = 0;
+
+onTouchStart(event: TouchEvent) {
+  this.startX = event.touches[0].clientX;
+}
+
+onTouchEnd(event: TouchEvent) {
+  const endX = event.changedTouches[0].clientX;
+  const deltaX = this.startX - endX;
+
+  if (deltaX > 50) {
+    this.showNextFeedback(); // Swipe nach links → nächster Slide
+  } else if (deltaX < -50) {
+    this.showPreviousFeedback(); // Swipe nach rechts → vorheriger Slide
+  }
+}
 }

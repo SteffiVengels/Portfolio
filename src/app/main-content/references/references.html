@@ -2,11 +2,11 @@
     <div class="max-width">
         <div class="references_content">
             <h4>{{ 'references.title' | translate }}</h4>
-            <div class="carousel">
+            <div class="carousel" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
                 <div class="shadow">
                 </div>
-                                <div class="quotes">
-                    <img  src="/assets/img/quotes.png" alt="">
+                <div class="quotes">
+                    <img src="/assets/img/quotes.png" alt="">
                 </div>
 
                 <div class="card" *ngFor="let feedback of feedbackList; let i = index" [ngClass]="getCardClass(i)">

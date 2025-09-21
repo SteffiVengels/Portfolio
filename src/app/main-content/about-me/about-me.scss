@@ -13,16 +13,12 @@
     display: flex;
 }
 
+
 .about_me_content {
     width: 100%;
     padding-top: clamp(100px, 10vw, 144px);
-    /* falls oben kein Padding gewünscht */
-
-    /* right/left */
     padding-left: clamp(16px, 5vw, 96px);
     padding-right: clamp(16px, 5vw, 96px);
-
-    /* bottom */
     padding-bottom: clamp(100px, 10vw, 144px);
     display: flex;
     flex-direction: row;
@@ -30,6 +26,7 @@
     gap: clamp(40px, 5vw, 96px);
     overflow: hidden;
 }
+
 
 .picture_container {
     position: relative;
@@ -49,6 +46,7 @@
     }
 }
 
+
 .picture {
     top: 0;
     left: 0;
@@ -58,11 +56,13 @@
     border-radius: 32px;
 }
 
+
 .background_picture {
     display: none;
     top: 32px;
     left: -32px;
 }
+
 
 .text_container {
     margin-top: 98px;
@@ -88,10 +88,12 @@
     }
 }
 
+
 .icon {
     height: 32px;
     width: 32px;
 }
+
 
 .general {
     font-family: 'Karla';
@@ -101,6 +103,7 @@
     margin: 0;
     padding-bottom: 16px;
 }
+
 
 .bulletpoints {
     font-family: 'Karla';
@@ -114,13 +117,14 @@
     }
 }
 
+
 .bulletpoint_container {
     padding-top: 16px;
     display: flex;
     flex-direction: row;
     gap: 24px;
-
 }
+
 
 @media (max-width: 1023px) {
 
@@ -139,18 +143,18 @@
     }
 }
 
+
 @media (max-width: 420px) {
 
-
-.picture_container {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1/1;  
-
-    >img {
+    .picture_container {
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 1/1;
+
+        >img {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 1/1;
+        }
     }
-}
 }

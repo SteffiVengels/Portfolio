@@ -11,12 +11,17 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
-    constructor(private router: Router, public translate: TranslateService) {
+  private specialRoutes = ['/legal-notice', '/privacy-policy'];
+
+  constructor(private router: Router, public translate: TranslateService) { }
+
+
+  /**
+   * Determines whether the current page is a "special" page.
+   *
+   * @returns `true` if the current route is in `specialRoutes`, otherwise `false`.
+   */
+  get isSpecialPage(): boolean {
+    return this.specialRoutes.includes(this.router.url);
   }
-
-private specialRoutes = ['/legal-notice', '/privacy-policy'];
-
-get isSpecialPage(): boolean {
-  return this.specialRoutes.includes(this.router.url);
-}
 }

@@ -5,6 +5,7 @@
     background-color: #1c1c1c;
 }
 
+
 .max-width {
     max-width: 1920px;
     width: 100%;
@@ -15,6 +16,7 @@
     overflow: hidden;
 }
 
+
 .references_content {
     width: 100%;
     display: flex;
@@ -23,7 +25,6 @@
     align-items: center;
     position: relative;
     padding-bottom: clamp(100px, 10vw, 144px);
-
 }
 
 
@@ -39,6 +40,7 @@
     position: relative;
 }
 
+
 .arrows {
     display: flex;
     flex-direction: row;
@@ -47,6 +49,7 @@
     z-index: 999;
 }
 
+
 .dot {
     width: 8px;
     height: 8px;
@@ -54,9 +57,11 @@
     border-radius: 50%;
 }
 
+
 .dot.active {
     background-color: #3DCFB6;
 }
+
 
 .arrow {
     height: 40px;
@@ -64,6 +69,7 @@
     background-color: transparent;
     border: none;
 }
+
 
 .left {
     background-image: url('./../../../assets/img/arrow_left.png');
@@ -83,6 +89,7 @@
         background-image: url('./../../../assets/img/arrow_right_hover.png');
     }
 }
+
 
 .card {
     font-family: 'Karla';
@@ -104,13 +111,14 @@
     >p {
         margin: 0;
     }
-
 }
+
 
 .card.hidden {
     opacity: 0;
     pointer-events: none;
 }
+
 
 .card.active {
     transform: translateX(0) scale(1);
@@ -118,11 +126,12 @@
     z-index: 5;
 }
 
-/* links neben active */
+
 .card.prev1 {
     transform: translateX(-110%) scale(0.9);
     z-index: 4;
 }
+
 
 .card.prev2 {
     opacity: 0;
@@ -130,11 +139,12 @@
     z-index: 3;
 }
 
-/* rechts neben active */
+
 .card.next1 {
     transform: translateX(110%) scale(0.9);
     z-index: 4;
 }
+
 
 .card.next2 {
     opacity: 0;
@@ -152,11 +162,13 @@
     gap: 16px;
 }
 
+
 .vector {
     border: 1px solid rgba(255, 255, 255, 0.8);
     flex: 1;
     height: 0px;
 }
+
 
 .shadow {
     position: absolute;
@@ -166,8 +178,8 @@
     right: 0;
     background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
     z-index: 100;
-
 }
+
 
 .card img {
     width: 89px;
@@ -176,6 +188,7 @@
     top: -10px;
     left: -44px;
 }
+
 
 .quotes {
     display: flex;
@@ -195,17 +208,13 @@
     }
 }
 
+
 @media (max-width: 1023px) {
 
     .carousel {
         height: clamp(178px + 98px,
-                /* min + 98 */
                 calc((288.57px - 7.67857vw) + 98px),
-                /* fluid + 98 */
-                264px + 98px
-                /* max + 98 */
-            );
-
+                264px + 98px);
     }
 
     .card {
@@ -218,15 +227,11 @@
     .quotes {
         width: calc(50% + 80px);
         height: clamp(178px + 98px,
-                /* min + 98 */
                 calc((288.57px - 7.67857vw) + 98px),
-                /* fluid + 98 */
-                264px + 98px
-                /* max + 98 */
-            );
+                264px + 98px);
     }
-
 }
+
 
 @media (max-width: 767px) {
 
@@ -239,7 +244,6 @@
                 calc(244px + (380 - 244) * ((767px - 100vw) / (767 - 480))),
                 380px);
         min-width: 50%;
-
     }
 
     .carousel {
@@ -252,17 +256,17 @@
         height: clamp(244px + 98px,
                 calc(244px + (380 - 244) * ((767px - 100vw) / (767 - 480)) + 98px),
                 380px + 98px);
-
         min-width: 50%;
     }
 }
+
 
 @media (max-width: 480px) {
 
     .shadow {
         display: none;
     }
-    
+
     .card {
         height: clamp(260px,
                 calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300))),
@@ -280,7 +284,6 @@
         height: clamp(260px + 98px,
                 calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300)) + 98px),
                 540px + 98px);
-
         min-width: calc(100vw - 130px);
     }
 }

@@ -11,9 +11,9 @@
     z-index: 1000;
 }
 
+
 .dialog {
     display: flex;
-
     padding: 64px;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     border: 1px solid #3DCFB6;
@@ -21,24 +21,25 @@
     max-width: 1250px;
     max-height: 656px;
     margin: 64px;
-    transform: translateY(-50px); // Startpunkt oben
-    opacity: 0; // unsichtbar am Anfang
+    transform: translateY(-50px);
+    opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
-overflow: hidden;
-
+    overflow: hidden;
 
     &.open {
-        transform: translateY(0); // Endposition
-        opacity: 1; // sichtbar
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
+
 .dialog_scrollbar {
-        display: flex;
+    display: flex;
     flex-direction: row-reverse;
     overflow-y: auto;
     overflow-x: hidden;
 }
+
 
 .content_left {
     >h2 {
@@ -53,7 +54,6 @@ overflow: hidden;
         color: #3DCFB6;
     }
 }
-
 
 
 .about_the_project {
@@ -91,6 +91,7 @@ overflow: hidden;
     }
 }
 
+
 .links {
     display: flex;
     gap: 32px;
@@ -109,8 +110,6 @@ overflow: hidden;
         align-items: center;
         transition: color 0.3s ease, border-color 0.3s ease;
 
-
-
         >img {
             height: 20px;
             width: 20px;
@@ -118,21 +117,17 @@ overflow: hidden;
             transition: transform 0.3s ease;
         }
 
-
-
-
         &:hover {
             color: #3DCFB6;
             border-color: #3DCFB6;
 
             >img {
-                transform: rotate(-45deg) translate(4px, 1px); // nach oben links verschieben
+                transform: rotate(-45deg) translate(4px, 1px);
             }
-
         }
     }
-
 }
+
 
 .content_right {
     min-height: 100%;
@@ -148,6 +143,7 @@ overflow: hidden;
         margin-left: 64px;
     }
 }
+
 
 .close_btn {
     background-color: transparent;
@@ -192,10 +188,10 @@ overflow: hidden;
     }
 }
 
+
 .mobile {
     display: none;
 }
-
 
 
 @media (max-width: 1239px) {
@@ -233,7 +229,6 @@ overflow: hidden;
         >img {
             display: inline-block;
         }
-
     }
 
     .next_btn {
@@ -243,14 +238,11 @@ overflow: hidden;
     .dialog {
         padding: 32px;
     }
-
-
 }
 
 @media (max-width: 900px) {
 
     .dialog {
-   
         max-height: calc(100vh - 64px);
         width: 380px;
     }
@@ -282,16 +274,15 @@ overflow: hidden;
         margin-top: 32px;
     }
 
-
-
     .links {
         display: flex;
         justify-content: center;
     }
 }
 
+
 @media (max-width: 580px) {
-        .content_right {
+    .content_right {
         min-height: fit-content;
 
         >img {
@@ -299,11 +290,10 @@ overflow: hidden;
             margin-right: 0;
             height: auto;
             width: 100%;
-
         }
     }
 
-        .links {
+    .links {
         gap: 16px;
 
         >a {
@@ -311,6 +301,7 @@ overflow: hidden;
         }
     }
 }
+
 
 @media (max-width: 480px) {
 
@@ -320,24 +311,15 @@ overflow: hidden;
     }
 
     .dialog {
-
         padding: 12px;
         width: clamp(300px,
                 calc(380px + (300 - 380) * ((480px - 100vw) / (480 - 320))),
                 380px);
         min-width: 290px;
         height: calc(100vh - 64px);
-
     }
-
-
 
     .next_btn {
-
         bottom: 12px;
     }
-
-
-
-
 }

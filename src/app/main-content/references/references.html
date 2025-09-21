@@ -8,9 +8,7 @@
                 <div class="quotes">
                     <img src="/assets/img/quotes.png" alt="">
                 </div>
-
                 <div class="card" *ngFor="let feedback of feedbackList; let i = index" [ngClass]="getCardClass(i)">
-
                     <p>{{ 'references.feedback.' + feedback.id + '.text' | translate }}</p>
                     <div class="info">
                         <div class="vector"></div>

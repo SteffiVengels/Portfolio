@@ -22,39 +22,55 @@ interface Project {
 
 export class PortfolioOverlay {
 
-
   @Input() projectList: Project[] = [];
   @Input() currentIndex: number = 0;
-
   @Output() closed = new EventEmitter<void>();
 
   isOpen = false;
 
+  constructor(public translate: TranslateService) { }
+
+  /**
+   * Initializes the overlay and triggers the opening animation.
+   */
   ngOnInit() {
-    // Animation starten, sobald das Overlay gerendert ist
     setTimeout(() => this.isOpen = true, 10);
   }
 
+
+  /**
+   * Returns the currently selected project.
+   */
   get selectedProject() {
     return this.projectList[this.currentIndex];
   }
 
+
+  /**
+   * Returns the formatted number of the current project (e.g., "01", "02").
+   */
   get number(): string {
     return (this.currentIndex + 1).toString().padStart(2, '0');
   }
 
+
+  /**
+ * Switches to the next project in the list.  
+ * Loops back to the first project if the end is reached.
+ */
   nextProject() {
     this.currentIndex = (this.currentIndex + 1) % this.projectList.length;
   }
 
+
+  /**
+   * Closes the overlay and emits the `closed` event after the exit animation.
+   */
   closeDialog(): void {
     this.isOpen = false;
-    // Overlay nach Animation schließen
     setTimeout(() => {
       this.closed.emit();
       document.body.classList.remove('no-scroll');
-    }, 300); // Dauer entspricht CSS-Transition
+    }, 300);
   }
-
-  constructor(public translate: TranslateService) { }
 }

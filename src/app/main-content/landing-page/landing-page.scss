@@ -31,7 +31,6 @@
     >h3 {
         margin: 0
     }
-
 }
 
 
@@ -164,7 +163,6 @@ a {
     bottom: 0;
     display: flex;
     align-items: center;
-
     flex-direction: column;
     gap: 24px;
 
@@ -196,9 +194,11 @@ a {
     }
 }
 
+
 .email_img {
     display: none;
 }
+
 
 .linkedin {
     background-image: url('./../../../assets/img/social icons/Linkedin.png');
@@ -206,8 +206,8 @@ a {
     &:hover {
         background-image: url('./../../../assets/img/social icons/Linkedin Hover.png');
     }
-
 }
+
 
 .github {
     background-image: url('./../../../assets/img/social icons/Github.png');
@@ -215,8 +215,8 @@ a {
     &:hover {
         background-image: url('./../../../assets/img/social icons/GitHub Hover.png');
     }
-
 }
+
 
 .vector {
     height: 186px;
@@ -224,6 +224,7 @@ a {
     border: 1px solid rgba(255, 255, 255, 1);
     margin-right: 12px;
 }
+
 
 .left_lateral {
     position: absolute;
@@ -254,56 +255,14 @@ a {
     }
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-h1.shiny {
-    font-size: 64px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #e6175d, #00ffe7, #e6175d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: shine 3s linear infinite;
-}
-
-@keyframes shine {
-    0% {
-        background-position: 0% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
-}
-
-
-
-
-
-
-/* -----------------------------
-   H1/H3 Fade-In Animation
------------------------------ */
-/* H1/H3 Animation */
 .title_container h1,
 .title_container h3 {
     opacity: 0;
     animation: fadeInTitle 1s forwards;
     text-align: center;
 }
+
 
 @keyframes fadeInTitle {
     0% {
@@ -316,6 +275,7 @@ h1.shiny {
         transform: translateY(0);
     }
 }
+
 
 @media (max-width: 767px) {
 
@@ -333,6 +293,7 @@ h1.shiny {
     }
 }
 
+
 @media (max-width: 540px) {
 
     .right_lateral {
@@ -349,15 +310,13 @@ h1.shiny {
 
     .marquee {
         bottom: 40px;
-        
     }
 
     .marquee_content {
         gap: 40px;
     }
-
-
 }
+
 
 @media (max-width: 380px) {
 
@@ -370,8 +329,5 @@ h1.shiny {
                 width: fit-content;
             }
         }
-
     }
-
-
 }

@@ -50,46 +50,76 @@ export class Portfolio implements AfterViewInit {
   ];
 
   hoveredIndex: number | null = null;
+  selectedProjectIndex: number | null = null;
   public animated = false;
 
-  selectedProjectIndex: number | null = null;
 
   constructor(public translate: TranslateService) { }
 
+
+  /**
+   * Returns the currently selected project, or `null` if none is selected.
+   */
   get selectedProject(): Project | null {
     return this.selectedProjectIndex !== null
       ? this.projectList[this.selectedProjectIndex]
       : null;
   }
 
+
+  /**
+ * Lifecycle hook that is called after the component's view has been initialized.
+ *
+ * @remarks
+ * - Sets up an IntersectionObserver on the `.project_overview` section.
+ * - When the section enters the viewport (threshold 0.3), triggers
+ *   the card animation by calling `animateCards()`.
+ * - Ensures the observer only fires once per section by unobserving the target.
+ */
   ngAfterViewInit(): void {
     const section = document.querySelector('.project_overview');
     if (!section) return;
-
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          obs.unobserve(entry.target); // nur einmal auslösen
-
-          // Base-Delay bevor die Animation startet
-          const cards = Array.from(document.querySelectorAll('.project_card.animation')) as HTMLElement[];
-          const baseDelay = 200;
-
-          setTimeout(() => {
-            this.animated = true; // bindet [class.visible] im HTML
-            cards.forEach((card, i) => {
-              setTimeout(() => {
-                card.classList.add('visible');
-              }, i * 150);
-            });
-          }, baseDelay);
+          obs.unobserve(entry.target);
+          this.animateCards();
         }
       });
     }, { threshold: 0.3 });
-
     observer.observe(section);
   }
 
+
+  /**
+   * Triggers the project card animations when the section
+   * enters the viewport.  
+   * Adds a staggered `visible` class to each card with a delay.
+   *
+   * @remarks
+   * - Uses a base delay before starting animations.
+   * - Iterates through all `.project_card.animation` elements.
+   * - Ensures cards fade in sequentially with 150ms steps.
+   */
+  private animateCards(): void {
+    const cards = Array.from(document.querySelectorAll('.project_card.animation')) as HTMLElement[];
+    const baseDelay = 200;
+    setTimeout(() => {
+      this.animated = true;
+      cards.forEach((card, i) => {
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, i * 150);
+      });
+    }, baseDelay);
+  }
+
+
+  /**
+    * Opens the overlay dialog for the selected project.
+    *
+    * @param index - Index of the project to open in the dialog.
+    */
   openDialog(index: number): void {
     this.selectedProjectIndex = index;
     document.body.classList.add('no-scroll');

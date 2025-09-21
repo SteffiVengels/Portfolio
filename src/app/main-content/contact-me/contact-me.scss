@@ -5,6 +5,7 @@
     background-color: #1c1c1c;
 }
 
+
 .max-width {
     max-width: 1920px;
     width: 100%;
@@ -14,19 +15,19 @@
     align-items: center;
 }
 
+
 .contact_me_content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: clamp(16px, 5vw, 96px);
     padding-right: clamp(16px, 5vw, 96px);
-
-    /* bottom */
     padding-bottom: clamp(100px, 10vw, 144px);
     width: 100%;
     gap: clamp(16px, 5vw, 96px);
     overflow: hidden;
 }
+
 
 .text_container {
     flex: 1;
@@ -43,6 +44,7 @@
         margin-top: 20px;
     }
 }
+
 
 .text {
     >span {
@@ -65,16 +67,15 @@
     }
 }
 
+
 .form_container {
- max-width: 616px;
-
-
+    max-width: 616px;
 }
+
 
 p {
     white-space: pre-line;
 }
-
 
 
 .feedback {
@@ -84,7 +85,7 @@ p {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); // Overlay bleibt
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,18 +129,17 @@ p {
         }
     }
 
-    // Animation nur auf Dialog
+
     &.visible .dialog {
         animation: slideIn 0.5s ease forwards, slideOut 0.5s ease 4s forwards;
     }
+
 
     @keyframes slideIn {
         0% {
             transform: translateX(100%);
             opacity: 0;
         }
-
-
 
         100% {
             transform: translateX(0);
@@ -161,14 +161,12 @@ p {
 }
 
 
-
 @media (max-width: 1023px) {
 
-        h2 {
+    h2 {
         hyphens: auto;
         overflow-wrap: break-word;
     }
-
 
     .text>p {
         font-size: 16px;

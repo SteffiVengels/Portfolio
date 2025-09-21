@@ -6,6 +6,7 @@
     align-items: center;
 }
 
+
 .max-width {
     max-width: 1920px;
     width: 100%;
@@ -14,30 +15,25 @@
     justify-content: center;
 }
 
+
 .privacy_policy_content {
     padding-top: clamp(110px, 10vw, 154px);
-    /* falls oben kein Padding gewünscht */
-
-    /* right/left */
     padding-left: clamp(16px, 5vw, 96px);
     padding-right: clamp(16px, 5vw, 96px);
-
-    /* bottom */
     padding-bottom: clamp(100px, 10vw, 144px);
     width: 100%;
-
     overflow-wrap: break-word;
     word-break: break-word;
 }
 
+
 h2 {
     text-align: center;
     font-size: clamp(32px, 5vw, 64px);
-
     hyphens: auto;
     overflow-wrap: break-word;
-
 }
+
 
 p {
     font-family: 'Karla';
@@ -46,9 +42,11 @@ p {
     margin: 0;
 }
 
+
 span {
     color: white;
 }
+
 
 ul {
     margin: 0;
@@ -58,6 +56,7 @@ ul {
     padding-top: 16px;
     padding-bottom: 16px;
 }
+
 
 a {
     font-family: 'Karla';
@@ -73,6 +72,7 @@ a {
         color: white;
     }
 }
+
 
 .text {
     display: flex;

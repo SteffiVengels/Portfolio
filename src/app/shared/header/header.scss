@@ -7,8 +7,8 @@ header {
     width: 100%;
     z-index: 1000;
     transition: transform 0.3s ease-in-out, opacity 2s ease;
-
 }
+
 
 .max-width {
     max-width: 1920px;
@@ -31,11 +31,7 @@ header {
             background-image: url('./../../../assets/img/logo_wb_hover.png') !important;
         }
     }
-
-
 }
-
-
 
 
 .language_btn {
@@ -51,6 +47,7 @@ header {
     }
 }
 
+
 .language_en {
     background-image: url('./../../../assets/img/default.png');
 
@@ -58,6 +55,7 @@ header {
         background-image: url('./../../../assets/img/default hover.png');
     }
 }
+
 
 .nav_link.active {
     color: rgba(106, 215, 191, 1) !important;
@@ -69,18 +67,17 @@ header {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-
     }
-
 }
 
-.header_left, .mobile_menu_dialog {
+
+.header_left,
+.mobile_menu_dialog {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
     margin-left: 96px;
-
 
     >a {
         text-decoration: none;
@@ -100,9 +97,7 @@ header {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-
         }
-
     }
 }
 
@@ -111,9 +106,11 @@ header {
     transform: translateY(-100%);
 }
 
+
 .header_mobile {
     display: none;
 }
+
 
 .mobile_menu {
     display: none;
@@ -126,13 +123,13 @@ header {
     z-index: 1000;
 }
 
+
 .mobile_menu_dialog {
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     border: 1px solid #3DCFB6;
     border-radius: 30px;
     height: 252px;
     width: 238px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,10 +152,9 @@ header {
     }
 }
 
+
 .mobile_menu.open {
     display: flex;
-
-
 }
 
 
@@ -190,5 +186,4 @@ header {
             background-image: url('./../../../assets/img/menu_icon_hover.png');
         }
     }
-
 }

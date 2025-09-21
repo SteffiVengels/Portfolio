@@ -14,7 +14,6 @@ export class LandingPage {
 
   constructor(public state: State, public translate: TranslateService) {}
 
-
 }
 
 

@@ -24,7 +24,7 @@ export class Skills {
     { name: 'REST-API', img: 'rest-api.png' },
     { name: 'Scrum', img: 'scrum.png' }
   ]
-  constructor(public translate: TranslateService) {
-  }
+
+  constructor(public translate: TranslateService) {}
 
 }

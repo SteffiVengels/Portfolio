@@ -12,9 +12,11 @@ footer {
     background-color: #1c1c1c;
 }
 
+
 .footer-legal {
-    background-color: transparent; // Legal Notice
+    background-color: transparent; 
 }
+
 
 .max-width {
     max-width: 1920px;
@@ -24,11 +26,10 @@ footer {
     justify-content: center;
 }
 
+
 .footer_content {
     width: 100%;
     padding-bottom: 40px;
-
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +40,6 @@ footer {
         font-size: 18px;
         color: #3DCFB6;
     }
-
 }
 
 
@@ -74,6 +74,7 @@ footer {
     }
 }
 
+
 .socials {
     width: 320px;
     display: flex;
@@ -102,9 +103,9 @@ footer {
                 }
             }
         }
-
     }
 }
+
 
 .dot {
     display: flex;
@@ -116,9 +117,11 @@ footer {
     transition: all 0.3s ease-out;
 }
 
+
 .p_mobile {
     display: none;
 }
+
 
 @media (max-width: 1023px) {
 
@@ -142,12 +145,14 @@ footer {
     }
 }
 
+
 @media (max-width: 767px) {
 
     .socials {
         width: fit-content;
     }
 }
+
 
 @media (max-width: 480px) {
 
@@ -168,7 +173,4 @@ footer {
             max-width: 320px;
         }
     }
-
-
-
 }

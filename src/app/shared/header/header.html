@@ -17,10 +17,8 @@
             </a>
         </div>
         <div class="header_mobile" (click)="toggleMobileMenu()"></div>
-
         <a href="#landing-page"></a>
     </div>
-
     <div class="mobile_menu" [class.open]="isMobileMenuOpen" (click)="toggleMobileMenu()">
         <div class="mobile_menu_dialog" (click)="$event.stopPropagation()">
             <a href="#about-me" class="nav_link" [ngClass]="{'active': isActive('about')}"
@@ -38,7 +36,5 @@
             <button class="language_btn" [ngClass]="{'language_en': translate.getCurrentLang() === 'en'}"
                 (click)="toggleLanguage()"></button>
         </div>
-
     </div>
-
 </header>

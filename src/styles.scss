@@ -3,30 +3,32 @@
     src: url('assets/fonts/Karla/Karla-VariableFont_wght.ttf') format('truetype');
 }
 
+
 @font-face {
     font-family: 'Fira-Code';
     src: url('assets/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf') format('truetype');
 }
+
 
 :root {
     --mx: 50%;
     --my: 50%;
     --spot-size: 80px;
     --spot-color: rgba(61, 207, 182, 0.5);
-    ;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
     scroll-behavior: smooth;
     background-image: linear-gradient(to bottom left, #08463b, #1c1c1c 60%);
-
-
 }
+
 
 .spotlight-overlay {
     position: fixed;
@@ -39,12 +41,14 @@ body {
             transparent var(--spot-size));
 }
 
+
 h1 {
     font-family: 'Karla';
     font-size: clamp(62px, 8vw, 128px);
     font-weight: 700;
     font-style: bold;
 }
+
 
 h2 {
     color: #3DCFB6;
@@ -55,11 +59,13 @@ h2 {
     padding-bottom: 40px;
 }
 
+
 h3 {
     font-family: 'Fira-Code';
     font-size: clamp(24px, 2.5vw, 40px);
     font-weight: 400;
 }
+
 
 h4 {
     font-family: 'Fira-Code';
@@ -68,6 +74,7 @@ h4 {
     color: #3DCFB6;
     margin: 0;
 }
+
 
 h6 {
     font-family: Karla;
@@ -78,42 +85,40 @@ h6 {
 }
 
 
-
 body {
     --sb-track-color: #1c1c1c;
     --sb-thumb-color: #08463b;
     --sb-size: 8px;
 }
 
-/* Webkit-Browser (Chrome, Safari) */
+
 ::-webkit-scrollbar {
     width: var(--sb-size);
 }
 
+
 ::-webkit-scrollbar-track {
     background: var(--sb-track-color);
     border-radius: 0;
-    /* Track eckig → keine weißen Punkte */
 }
+
 
 ::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 8px;
-    /* nur Thumb rund */
     border: none;
     min-height: 30px;
-    /* optional: Thumb-Höhe minimal */
     background-clip: content-box;
-    /* sauberes Rendern */
 }
 
-/* Firefox fallback */
+
 @supports not selector(::-webkit-scrollbar) {
     body {
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
         scrollbar-width: thin;
     }
 }
+
 
 .no-scroll {
     overflow: hidden;
@@ -126,13 +131,16 @@ body {
     transition: all 0.8s ease-out;
 }
 
+
 .reveal-left {
     transform: translateX(-80px);
 }
 
+
 .reveal-right {
     transform: translateX(80px);
 }
+
 
 .reveal-visible {
     opacity: 1;
@@ -140,9 +148,6 @@ body {
 }
 
 
-
-
-/* Restliche Elemente unsichtbar am Anfang */
 .landing_page>.max-width>*:not(.title_container),
 .title_container .title_div>div,
 .marquee,
@@ -153,7 +158,7 @@ header {
     transition: opacity 2s ease;
 }
 
-/* Sichtbar-Klasse */
+
 .landing_page>.max-width>*:not(.title_container).visible,
 .title_container .title_div>div.visible,
 .marquee.visible,
@@ -171,9 +176,7 @@ header.visible {
     text-decoration: none;
     color: #3DCFB6;
     word-wrap: break-word;
-    /* Alte Variante, funktioniert überall */
     overflow-wrap: break-word;
-    /* Moderne Variante */
 
     &:hover {
         text-decoration: underline;

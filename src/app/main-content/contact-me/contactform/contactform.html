@@ -29,13 +29,14 @@
             [ngClass]="{'error': privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)}">
             <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
                 required>
-            <label for="privacy">{{ 'contactForm.privacyText' | translate }} <a href="privacy-policy">{{ 'contactForm.privacy' | translate }}</a> {{ 'contactForm.privacyText2' | translate }}</label>
+            <label for="privacy">{{ 'contactForm.privacyText' | translate }} <a href="privacy-policy">{{
+                    'contactForm.privacy' | translate }}</a> {{ 'contactForm.privacyText2' | translate }}</label>
         </div>
-        @if (privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)) {<p class="error_msg">{{ 'contactForm.privacyError' | translate }}</p>}
-        </div>
+        @if (privacy.invalid && (privacy.dirty || privacy.touched || contactForm.submitted)) {<p class="error_msg">{{
+            'contactForm.privacyError' | translate }}</p>}
+    </div>
 
     <button type="submit" class="submit_btn">
         <span>{{ 'contactForm.send' | translate }} ;)</span>
     </button>
 </form>
-

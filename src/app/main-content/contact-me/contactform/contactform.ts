@@ -31,6 +31,10 @@ export class Contactform {
   showFeedback = true;
   errorMessage = false;
 
+  
+  /**
+   * Configuration object for sending form data to the backend.
+   */
   post = {
     endPoint: 'https://stefanie-vengels.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -42,24 +46,31 @@ export class Contactform {
     },
   };
 
+
+    /**
+   * Handles form submission.  
+   * If the form is valid and not in test mode, it sends the data to the backend.  
+   * Emits feedback about success or error state.
+   * 
+   * @param ngForm - Angular form instance containing validation state and data.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.feedback.emit({ success: true }); // Erfolg melden
+            this.feedback.emit({ success: true });
             ngForm.resetForm();
           },
           error: (error) => {
-            this.feedback.emit({ success: false }); // Fehler melden
+            this.feedback.emit({ success: false });
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-      this.feedback.emit({ success: true }); // Fake-Erfolg im Testmodus
+      this.feedback.emit({ success: true });
     }
   }
-
 }

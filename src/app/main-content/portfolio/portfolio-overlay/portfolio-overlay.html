@@ -10,14 +10,14 @@
             </section>
             <section class="content_left">
                 <span>{{ number }}</span>
-                <h2 lang="de">{{ selectedProject.title }}</h2>
+                <h2 lang="de" translate="no">{{ selectedProject.title }}</h2>
                 <div class="about_the_project">
                     <p class="headline">{{ 'portfolioDialog.question' | translate }}</p>
                     <p class="description">{{ ('projects.' + selectedProject.title + '.description') | translate }}</p>
                     <div class="skills">
                         <ng-container *ngFor="let skill of selectedProject.skills; let i = index">
                             <img [src]="'/assets/img/skills/dialog/' + skill + '.png'" [alt]="skill">
-                            <span>{{ skill }}</span>
+                            <span translate="no">{{ skill }}</span>
                         </ng-container>
                     </div>
                 </div>

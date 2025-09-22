@@ -4,7 +4,7 @@
             <div class="text_container reveal-left">
                 <span>{{ 'skills.section' | translate }}</span>
                 <div class="text">
-                    <h2 lang="de">{{ 'skills.title' | translate }}</h2>
+                    <h2 lang="de" translate="no">{{ 'skills.title' | translate }}</h2>
                     <p>{{ 'skills.general' | translate }}</p>
                     <strong>{{ 'skills.question' | translate }} <span>{{ 'skills.question_important' | translate
                             }}</span></strong>
@@ -17,13 +17,13 @@
                     <div class="frame">
                         <img [src]="'assets/img/skills/' + skill.img" [alt]="skill.name + ' icon'">
                     </div>
-                    <p>{{ skill.name }}</p>
+                    <p translate="no">{{ skill.name }}</p>
                 </section>
                 <section class="growth_mindset_box">
                     <div class="frame">
                         <img src="assets/img/skills/growthms.png" alt="growth mindset icon">
                     </div>
-                    <p>Growth mindset</p>
+                    <p translate="no">Growth mindset</p>
                     <div class="preview">
                         <img src="assets/img/skills/Group-18.png" alt="Vue and React icon">
                     </div>

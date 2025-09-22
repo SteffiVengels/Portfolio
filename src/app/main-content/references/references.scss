@@ -237,6 +237,8 @@
 
     h4 {
         text-align: center;
+        padding-left: clamp(16px, 5vw, 96px);
+        padding-right: clamp(16px, 5vw, 96px);
     }
 
     .card {
@@ -285,5 +287,14 @@
                 calc(260px + (540 - 260) * ((480px - 100vw) / (480 - 300)) + 98px),
                 540px + 98px);
         min-width: calc(100vw - 130px);
+    }
+}
+
+@media (max-width: 360px) {
+
+    .quotes {
+        >img {
+            left: -20px;
+        }
     }
 }

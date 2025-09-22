@@ -14,17 +14,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactMe {
 
-  /**
-   * Controls whether the feedback message is visible.
-   */
   showFeedback = false;
-
-  /**
-   * Indicates if the last feedback message represents an error.
-   */
   errorMessage = false;
 
-  
   constructor(public translate: TranslateService) { }
 
 

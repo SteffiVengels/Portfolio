@@ -39,14 +39,9 @@ export class References {
     },
     {
       id: 5,
-      name: 'K. Kukowin',
+      name: 'S. Ebert',
       role: 'Team Partner',
-    },
-    {
-      id: 6,
-      name: 'J. Katanek',
-      role: 'Team Partner',
-    },
+    }
   ];
 
 

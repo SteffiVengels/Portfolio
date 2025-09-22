@@ -45,8 +45,8 @@
         "Happy Hollow": {
             "description": "Jump-and-run game based on an object-oriented approach. Choose a Tiny Hero, collect magical berries, and defeat the mighty Endboss."
         },
-        "Portfolio": {
-            "description": "My personal developer portfolio built with Angular 20 – a platform to showcase my projects, skills, and passion for coding."
+        "DABubble": {
+            "description": "Coming soon: Chat application inspired by Slack. Communicate in real time, organize channels, and enhance team collaboration."
         }
     },
     "references": {
@@ -65,10 +65,7 @@
                 "text": "Our project was a smooth experience, thanks to Steffi’s open communication and ideas."
             },
             "5": {
-                "text": "Working with Stefanie has been a true pleasure. I was especially impressed by her extensive knowledge and her ability to independently find solutions — always thinking outside the box and offering support whenever needed. She combines expertise with team spirit, making collaboration both effective and enjoyable."
-            },
-            "6": {
-                "text": "Steffi has proven to be a helpful and valuable support when it comes to process investigation and improvement, focussing on solution-oriented approaches and efficient data processing"
+                "text": "Working with Steffi was an absolute pleasure. Her combination of strong technical skills and a highly structured, reliable work ethic is a huge asset. She’s always open to new ideas and incredibly helpful, making her a wonderful and dependable team partner."
             }
         }
     },

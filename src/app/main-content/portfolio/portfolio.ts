@@ -40,12 +40,12 @@ export class Portfolio implements AfterViewInit {
       subdomain: 'https://happy-hollow.stefanie-vengels.dev/'
     },
     {
-      title: 'Portfolio',
-      skills: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-      imagePreview: 'assets/img/portfolio/portfolio.png',
-      imageDialog: 'assets/img/portfolio/portfolio_dialog.png',
-      github: 'https://github.com/SteffiVengels/Portfolio',
-      subdomain: 'https://stefanie-vengels.dev/'
+      title: 'DABubble',
+      skills: ['Angular', 'Firebase', 'TypeScript', 'HTML', 'CSS'],
+      imagePreview: 'assets/img/portfolio/coming_soon.png',
+      imageDialog: 'assets/img/portfolio/coming_soon.png',
+      github: 'https://github.com/SteffiVengels/DABubble',
+      subdomain: 'https://dabubble.stefanie-vengels.dev/'
     }
   ];
 

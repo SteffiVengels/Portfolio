@@ -52,14 +52,14 @@ footer {
     padding-left: clamp(16px, 5vw, 96px);
 
     >a {
-        background-image: url('./../../../assets/img/logo_wb.png');
+        background-image: url('./../../../assets/img/logo.png');
         width: 320px;
         height: 126px;
         background-position: center;
-        background-size: 150%;
+        background-size: cover;
 
         &:hover {
-            background-image: url('./../../../assets/img/logo_wb_hover.png');
+            background-image: url('./../../../assets/img/logo_hover.png');
         }
     }
 

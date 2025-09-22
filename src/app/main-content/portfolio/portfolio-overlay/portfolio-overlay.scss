@@ -194,6 +194,11 @@
 }
 
 
+.skills {
+    flex-wrap: wrap;
+}
+
+
 @media (max-width: 1239px) {
 
     .content_right {
@@ -224,7 +229,6 @@
 
     .skills {
         font-size: 16px !important;
-        flex-wrap: wrap;
 
         >img {
             display: inline-block;

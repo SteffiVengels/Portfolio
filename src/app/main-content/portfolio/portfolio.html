@@ -9,12 +9,12 @@
                     <div class="project_card animation" *ngFor="let project of projectList; let i = index"
                         (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null" (click)="openDialog(i)">
                         <div class="title">
-                            <p translate="no">{{ project.title }}</p>
+                            <p>{{ project.title }}</p>
                             <img src="assets/img/arrow_outward.png" alt="">
                         </div>
                         <div class="skills">
                             <ng-container *ngFor="let skill of project.skills; let i = index">
-                                <p translate="no">{{ skill }}</p>
+                                <p>{{ skill }}</p>
                                 <div *ngIf="i < project.skills.length - 1" class="skill-separator">|</div>
                             </ng-container>
                         </div>

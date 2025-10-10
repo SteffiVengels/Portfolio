@@ -34,7 +34,7 @@ export class References {
     },
     {
       id: 4,
-      name: 'J. Flat',
+      name: 'A. Naß',
       role: 'Team Partner',
     },
     {

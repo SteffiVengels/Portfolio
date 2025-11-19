@@ -153,6 +153,7 @@ body {
 .marquee,
 .right_lateral,
 .left_lateral,
+.christmas,
 header {
     opacity: 0;
     transition: opacity 2s ease;
@@ -164,6 +165,7 @@ header {
 .marquee.visible,
 .right_lateral.visible,
 .left_lateral.visible,
+.christmas.visible,
 header.visible {
     opacity: 1;
 }

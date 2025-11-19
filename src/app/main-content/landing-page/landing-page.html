@@ -1,9 +1,11 @@
+<div class="snow-container"></div>
 <section class="landing_page">
     <div class="max-width">
         <div class="title_container">
             <h3>{{ 'landingPage.title' | translate }}</h3>
             <div class="title_div">
                 <h1>Stefanie Vengels</h1>
+                <img src="assets/img/christmas_hat.png" alt="" class="christmas" (click)="toggleChristmasVersion()" [class.visible]="state.showRest()">
                 <div [class.visible]="state.showRest()">
                     <a href="#portfolio">
                         <span>{{ 'landingPage.checkmywork' | translate }}</span>

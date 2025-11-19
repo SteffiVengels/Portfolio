@@ -40,6 +40,7 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+    position: relative;
 
     >h1 {
         margin: 0
@@ -346,4 +347,80 @@ a {
             }
         }
     }
+}
+
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+/* Klassen-basierte Animationen (vermeidet Probleme mit umbenannten Keyframes) */
+.snowflake.anim-fall {
+    animation-name: fall;
+    animation-duration: var(--dur, 3s);
+    animation-iteration-count: 1;
+}
+
+.snowflake.anim-diagonal {
+    animation-name: diagonal-fall;
+    animation-duration: var(--dur, 3s);
+    animation-iteration-count: 1;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
+}
+
+.christmas {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    top: 8px;
+    left: -16px;
+    cursor: pointer;
 }
